@@ -1,0 +1,8 @@
+define k = Character("Квист", who_color="#c8c8ff")
+define n = Character("Нонни", who_color="#90c8ff")
+define l = Character("Линь Чи", who_color="#ffd8b0")
+define b = Character("Беккер", who_color="#d0a0ff")
+define m = Character("Микко", who_color="#a0ffa0")
+define a = Character("Андреа", who_color="#ffa0a0")
+define i = Character("Иво", who_color="#c0c0c0")
+define p = Character("Пол", who_color="#c0c0c0")
