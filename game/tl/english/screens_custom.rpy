@@ -1,16 +1,16 @@
 translate english strings:
 
-    old "День"
-    new "Day"
+    old "День [current_day]"
+    new "Day [current_day]"
 
-    old "Действия:"
-    new "Actions:"
+    old "⚡ Действия: [actions]"
+    new "⚡ Actions: [actions]"
 
-    old "Провода:"
-    new "Wires:"
+    old "🔌 Провода: [wires]"
+    new "🔌 Wires: [wires]"
 
-    old "Микросхемы:"
-    new "Chips:"
+    old "💾 Микросхемы: [chips]"
+    new "💾 Chips: [chips]"
 
     old "Активные заказы:"
     new "Active Orders:"
