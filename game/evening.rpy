@@ -9,7 +9,7 @@ label evening_menu:
             jump repair_menu
         "Встретиться с Микко (-1 действие и вернёшься уже завтра)" if actions > 0:
             jump expression "day" + str(current_day) + "_hangout_mikko"
-        "Ждать на вино к Нони (-1 действие, на это потребуются силы)" if actions > 0 and clients["nonni"]["wine_accepted"] and current_day == 2:
+        "Ждать на вино к Нонни (-1 действие, на это потребуются силы)" if actions > 0 and clients["nonni"]["wine_accepted"] and current_day == 2:
             jump day2_noni_hangout
         "Забрать Андрею из Даров моря (-2 действия)" if current_day == 3:
             jump day3_andrea_takeaway

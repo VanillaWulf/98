@@ -65,7 +65,8 @@ label linchi_visit:
     k "Здравствуйте, бабуля Линь."
     play sound "order.mp3" noloop
     "Линь Чи достает старый плеер."
-    "Добавлен новый заказ: [clients['linh']['name']] - [clients['linh']['order_name']]"
+    
+    "Добавлен новый заказ: [tr('linh', 'name')] - [tr('linh', 'order_name')]"
     $ clients["linh"]["order_active"] = True
     l "Посмотришь?"
     k "Что случилось?"

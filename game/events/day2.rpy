@@ -110,7 +110,7 @@ label day2_start:
     play sound "order.mp3" noloop
     $ clients["bekker"]["order_active"] = True
     $ clients["bekker"]["order_name"] = "Модуль магнитного самоката"
-    "Добавлен новый заказ: [clients['bekker']['name']] - [clients['bekker']['order_name']]"
+    "Добавлен новый заказ: [tr('bekker', 'name')] - [tr('bekker', 'order_name')]"
     b "Кстати, что за бред у тебя на плакатах? Починим сам?"
     k "А, это Микко пару лет назад решил заняться рекламой и предложил напечатать плакаты"
     k "На каком-то старом корпоративном AI принтере, сам видишь, почему он попал к Микко. Я решил все равно повесить"
