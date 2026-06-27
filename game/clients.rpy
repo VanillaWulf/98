@@ -212,6 +212,10 @@ default clients = {
         "hacked": False,
         "get_jailed": False,
     },
+    "kvist": {
+        "name_ru": "Квист",
+        "name_en": "Kvist",
+    }    
 }
 
 init python:

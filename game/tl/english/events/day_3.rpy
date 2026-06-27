@@ -111,8 +111,8 @@ translate english day3_linh_visit_22ec4ff8:
 # game/events/day_3.rpy:83
 translate english day3_linh_visit_4eb31077_1:
 
-    # "Вам зачислили 15 кредитов"
-    "You received 15 credits."
+    # "Вам зачислили 20 кредитов"
+    "You received 20 credits."
 
 # game/events/day_3.rpy:84
 translate english day3_linh_visit_00215553:

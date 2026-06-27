@@ -80,7 +80,7 @@ label day3_linh_visit:
                 $ clients["bekker"]["base_price"] += 3
                 $ money += 20
                 play sound "money.mp3" noloop
-                "Вам зачислили 15 кредитов"
+                "Вам зачислили 20 кредитов"
                 l "Ох, дороговато, но что поделать... Спасибо."
 
     elif clients["linh"]["order_active"] and not clients["linh"]["order_completed"]:

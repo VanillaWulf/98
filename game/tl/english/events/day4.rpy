@@ -82,7 +82,7 @@ translate english day4_start_3572724d:
 translate english day4_start_3c42777f:
 
     # "Добавлен новый заказ: [clients['ivo']['name']] - [clients['ivo']['order_name']]"
-    "New order added: [clients['ivo']['name']] - [clients['ivo']['order_name']]"
+    "New order added: [tr('ivo', 'name')] - [tr('ivo', 'order_name')]"
 
 # game/events/day4.rpy:63
 translate english day4_start_8001a6c1:
