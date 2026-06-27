@@ -10,6 +10,6 @@ label start:
         "English":
             $ renpy.change_language("english")
 
-    jump day1_intro
+    jump day1
 
     return

@@ -1,4 +1,4 @@
-label day1_intro:
+label day1:
     play music "rain.mp3" loop
     show screen game_hud
     scene bg city
@@ -44,9 +44,9 @@ label day1_intro:
     k "Ладно. Сначала посмотрим, может еще кто что принесет сегодня"
     
     
-    jump andrea_call
+    jump day1_andrea_call
 
-label andrea_call:
+label day1_andrea_call:
     play sound "call.mp3" noloop
     scene bg call_andrea_run
     a "Привет, па. Еду от Даров Моря."
@@ -54,9 +54,9 @@ label andrea_call:
     a "Ты шутишь? Дерьмо, как обычно! И моноколесо опять скрипит - достало!"
     k "Подкопим, купим детали, отремонтируем, все будет хорошо"
     a "Да знаю я."
-    jump linchi_visit
+    jump day1_linchi_visit
 
-label linchi_visit:
+label day1_linchi_visit:
     scene bg door
     play sound "knock.mp3" noloop
     "Через несколько минут в дверь стучат."
@@ -81,9 +81,9 @@ label linchi_visit:
     l "Плеер нужен поскорее. Без музыки грустно."
     "Линь Чи уходит."
    
-    jump andrea_arrives
+    jump day1_andrea_arrives
 
-label andrea_arrives:
+label day1_andrea_arrives:
     scene bg door
     play sound "knock_andrea.mp3" noloop
     "Опять стучат, но уже знакомо."

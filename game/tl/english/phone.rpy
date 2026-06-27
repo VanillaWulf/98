@@ -16,4 +16,23 @@ translate english strings:
 
     # game/phone.rpy:10
     old "Андреа - [clients['andrea']['description']]"
-    new "Andrea - [clients['andrea']['description']]"
+    new "Andrea - [clients['andrea']['description']]"# TODO: Translation updated at 2026-06-27 14:10
+
+translate english strings:
+
+    # game/phone.rpy:18
+    old "[tr('nonni', 'name')] - [tr('nonni', 'description')]"
+    new ""
+
+    # game/phone.rpy:20
+    old "[tr('bekker', 'name')] - [tr('bekker', 'description')]"
+    new ""
+
+    # game/phone.rpy:22
+    old "[tr('mikko', 'name')] - [tr('mikko', 'description')]"
+    new ""
+
+    # game/phone.rpy:24
+    old "[tr('andrea', 'name')] - [tr('andrea', 'description')]"
+    new ""
+

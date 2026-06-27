@@ -346,4 +346,11 @@ translate english day2_call_pol_c922faa4:
 translate english day2_call_pol_fe1ef22b:
 
     # p "Надо помочь ей доехать до Нонни. Я бы сделал сам, но меня вызвали в рейд."
-    p "She needs help getting to Nonni. I'd do it myself, but I've been called out on a raid."
+    p "She needs help getting to Nonni. I'd do it myself, but I've been called out on a raid."# TODO: Translation updated at 2026-06-27 14:10
+
+# game/events/day_3.rpy:83
+translate english day3_linh_visit_86bf3c8f:
+
+    # "Вам зачислили 20 кредитов"
+    "You received 20 credits."
+

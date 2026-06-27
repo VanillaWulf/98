@@ -268,4 +268,11 @@ translate english day2_bekker_visit_7d1afb67:
 translate english day2_bekker_visit_de9ab8ea:
 
     # "Беккер улыбается и уходит"
-    "Bekker smiles and leaves."
+    "Bekker smiles and leaves."# TODO: Translation updated at 2026-06-27 14:10
+
+# game/events/day2.rpy:113
+translate english day2_bekker_visit_05d0dd50:
+
+    # "Добавлен новый заказ: [tr('bekker', 'name')] - [tr('bekker', 'order_name')]"
+    "New order added: [tr('bekker', 'name')] - [tr('bekker', 'order_name')]"
+
