@@ -1,10 +1,10 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/bekker/day4_becker.rpy:9
 translate english day4_call_becker_850ef128:
 
     # b "..."
-    b "..."
+    b ""
 
 # game/communications/bekker/day4_becker.rpy:10
 translate english day4_call_becker_3d89d6e4:
@@ -16,7 +16,7 @@ translate english day4_call_becker_3d89d6e4:
 translate english day4_call_becker_850ef128_1:
 
     # b "..."
-    b "..."
+    b ""
 
 # game/communications/bekker/day4_becker.rpy:18
 translate english day4_call_becker_1bfff904:
@@ -28,19 +28,19 @@ translate english day4_call_becker_1bfff904:
 translate english day4_call_becker_f5e9e969:
 
     # k "Ну я и кретин, довел его"
-    k "What an idiot I am. I finally pushed him too far."
+    k "What an idiot I am. I drove him away."
 
 # game/communications/bekker/day4_becker.rpy:29
 translate english day4_call_becker_45e79fb0:
 
     # b "Квист, поставки завтра нет"
-    b "Kvist, there won't be a shipment tomorrow."
+    b "Kvist, there won't be a delivery tomorrow."
 
 # game/communications/bekker/day4_becker.rpy:33
 translate english day4_call_becker_70eb73d7:
 
     # b "Кстати, модуль самоката готов? Мне надоело ходить пешком, у меня ответственный вечер, надо всё успеть."
-    b "By the way, is the scooter module ready? I'm tired of walking. I've got an important evening ahead and a lot to get done."
+    b "By the way, is the scooter module ready? I'm tired of walking everywhere. I've got an important evening ahead, and I need to get everything done."
 
 # game/communications/bekker/day4_becker.rpy:35
 translate english day4_call_becker_11fdb519:
@@ -52,13 +52,13 @@ translate english day4_call_becker_11fdb519:
 translate english day4_call_becker_5dba3eff:
 
     # b "Давай торопись, мне нужно это сегодня."
-    b "Then hurry up. I need it today."
+    b "Hurry up. I need it today."
 
 # game/communications/bekker/day4_becker.rpy:43
 translate english day4_call_becker_3a1d17fa:
 
     # b "Наконец-то. Ладно, проехали."
-    b "Finally. All right, let's move on."
+    b "Finally. Alright, forget it."
 
 # game/communications/bekker/day4_becker.rpy:52
 translate english day4_call_becker_4eb31077:
@@ -94,13 +94,13 @@ translate english day4_call_becker_b1a8f271:
 translate english day4_call_becker_69077b5b:
 
     # k "Делается."
-    k "Working on it."
+    k "I'm working on it."
 
 # game/communications/bekker/day4_becker.rpy:70
 translate english day4_call_becker_ccd1817c:
 
     # b "Давай торопись."
-    b "Then hurry up."
+    b "Hurry up."
 
 # game/communications/bekker/day4_becker.rpy:74
 translate english day4_call_becker_96c6bc84:
@@ -112,7 +112,7 @@ translate english day4_call_becker_96c6bc84:
 translate english day4_call_becker_76b28c2f:
 
     # b "Ну что там с моим модулем? Ты обещал сделать."
-    b "So what's going on with my module? You promised you'd fix it."
+    b "So, what's going on with my module? You promised you'd get it done."
 
 # game/communications/bekker/day4_becker.rpy:84
 translate english day4_call_becker_11fdb519_1:
@@ -124,13 +124,13 @@ translate english day4_call_becker_11fdb519_1:
 translate english day4_call_becker_87093962:
 
     # b "Ты меня троллишь? Больше не звони мне никогда. Про детали можешь забыть, деньги не верну"
-    b "Are you trolling me? Never call me again. Forget about any parts, and I'm not refunding your money."
+    b "Are you messing with me? Don't ever call me again. Forget about the parts. I'm not giving your money back."
 
 # game/communications/bekker/day4_becker.rpy:94
 translate english day4_call_becker_36478ed1:
 
     # b "Наконец-то. Ладно, проехали. Мне некогда"
-    b "Finally. Fine, let's move on. I'm busy."
+    b "Finally. Alright, forget it. I don't have time."
 
 # game/communications/bekker/day4_becker.rpy:103
 translate english day4_call_becker_4eb31077_1:
@@ -141,8 +141,8 @@ translate english day4_call_becker_4eb31077_1:
 # game/communications/bekker/day4_becker.rpy:104
 translate english day4_call_becker_266a70bd:
 
-    # b "Справедливо. Некогда."
-    b "Fair enough. I'm busy."
+    # b "Справедливо. некогда"
+    b "Fair enough. I don't have time."
 
 # game/communications/bekker/day4_becker.rpy:113
 translate english day4_call_becker_86bf3c8f_1:
@@ -153,8 +153,8 @@ translate english day4_call_becker_86bf3c8f_1:
 # game/communications/bekker/day4_becker.rpy:114
 translate english day4_call_becker_a8851a41:
 
-    # b "Начинаю понимать, почему ты дружишь с Микко. Некогда."
-    b "I'm starting to understand why you're friends with Mikko. I'm busy."
+    # b "Начинаю понимать, почему ты дружишь с Микко. некогда"
+    b "I'm starting to understand why you're friends with Mikko. I don't have time."
 
 # game/communications/bekker/day4_becker.rpy:120
 translate english day4_call_becker_c0ec2d74:

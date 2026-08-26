@@ -1,10 +1,10 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/micko/day3_micko.rpy:7
 translate english day3_call_mikko_e612037c:
 
     # m "..."
-    m "..."
+    m ""
 
 # game/communications/micko/day3_micko.rpy:8
 translate english day3_call_mikko_8e68e31e:
@@ -16,7 +16,7 @@ translate english day3_call_mikko_8e68e31e:
 translate english day3_call_mikko_c8cefc3c:
 
     # m "Квист, хорошо, что позвонил. Ты вчера меня здорово выручил."
-    m "Kvist, good thing you called. You really helped me out yesterday."
+    m "Kvist, I'm glad you called. You really helped me out yesterday."
 
 # game/communications/micko/day3_micko.rpy:29
 translate english day3_call_mikko_518f8ec8:
@@ -28,7 +28,7 @@ translate english day3_call_mikko_518f8ec8:
 translate english day3_call_mikko_196aeddf:
 
     # m "Хреново, но спасибо, что спросил. После склада биорук меня выследили."
-    m "Like shit, but thanks for asking. After the bionic arm warehouse job, someone tracked me down."
+    m "Pretty bad, but thanks for asking. They tracked me down after the bio-arm warehouse job."
 
 # game/communications/micko/day3_micko.rpy:33
 translate english day3_call_mikko_45d08044:
@@ -57,8 +57,8 @@ translate english day3_call_mikko_79c95ff9:
 # game/communications/micko/day3_micko.rpy:41
 translate english day3_call_mikko_42b9f01a:
 
-    # m "More serious than usual, Hopp Kvist. Get over here!"
-    m "More serious than usual, Hopp Kvist. Get over here!"
+    # m "Серьезнее, чем обычно, Хопп Квист, едь ко мне!"
+    m "Worse than usual. Hopp Kvist, come to my place!"
 
 # game/communications/micko/day3_micko.rpy:45
 translate english day3_call_mikko_181da529:
@@ -76,19 +76,19 @@ translate english day3_call_mikko_43352a09:
 translate english day3_call_mikko_7a1a558d:
 
     # m "Вчера там на складе биорук... Всё пошло сильно хуже, чем я рассчитывал. Меня выследили."
-    m "Yesterday at that bionic arm warehouse... things went a lot worse than I expected. Someone tracked me down."
+    m "About that bio-arm warehouse yesterday... Things went much worse than I expected. They tracked me down."
 
 # game/communications/micko/day3_micko.rpy:51
 translate english day3_call_mikko_224a4636:
 
     # k "И что теперь?"
-    k "And now what?"
+    k "So what now?"
 
 # game/communications/micko/day3_micko.rpy:53
 translate english day3_call_mikko_954b65fc:
 
-    # m "Теперь мне нужна помощь. Приезжай ко мне, объясню подробнее. Времени мало"
-    m "Now I need help. Come over and I'll explain. We don't have much time."
+    # m "Теперь мне нужна помощь. Приежай ко мне, объясню подробнее. Времени мало"
+    m "Now I need help. Come to my place and I'll explain everything. We don't have much time."
 
 # game/communications/micko/day3_micko.rpy:67
 translate english day3_call_mikko_e1a08445:
@@ -106,37 +106,37 @@ translate english day3_call_mikko_59deb24b:
 translate english day3_call_mikko_c85f677c:
 
     # m "Встретимся у меня. Приезжай скорее."
-    m "Meet me at my place. Hurry."
+    m "Meet me at my place. Get here as soon as you can."
 
 # game/communications/micko/day3_micko.rpy:86
 translate english day3_call_mikko_733497fe:
 
     # m "Квист, если у меня будут новости, я сам позвоню. Мне нужна помощь, а не звонки"
-    m "Kvist, if there's any news, I'll call you myself. I need help, not phone calls."
+    m "Kvist, if I have any news, I'll call you myself. I need help, not phone calls."
 
 # game/communications/micko/day3_micko.rpy:97
 translate english day3_hangout_mikko_76078a9d:
 
     # "Вечером вы встретились с Микко у него дома. Он сразу повёл вас через несколько дворов, постоянно оглядываясь по сторонам."
-    "That evening, you met Mikko at his home. He immediately led you through several courtyards, constantly looking over his shoulder."
+    "That evening, you met Mikko at his place. He immediately led you through several courtyards, constantly looking over his shoulder."
 
 # game/communications/micko/day3_micko.rpy:99
 translate english day3_hangout_mikko_4261cbdb:
 
     # "Кто-то действительно искал его. По дороге вам дважды пришлось менять маршрут, заметив незнакомцев, которые явно интересовались не прогулками по району."
-    "Someone really was looking for him. Along the way, you had to change routes twice after spotting strangers who were clearly interested in more than just taking a walk around the neighborhood."
+    "Someone really was looking for him. Along the way, you had to change your route twice after spotting strangers who clearly weren't just out for a walk."
 
 # game/communications/micko/day3_micko.rpy:101
 translate english day3_hangout_mikko_32afaab4:
 
     # "Несколько часов вы перевозили коробки с документами и деталями между тайниками знакомых Микко."
-    "For several hours, you moved boxes of documents and parts between the hideouts of Mikko's acquaintances."
+    "For several hours, you moved boxes of documents and parts between the hiding places of Mikko's contacts."
 
 # game/communications/micko/day3_micko.rpy:103
 translate english day3_hangout_mikko_b8351aa2:
 
     # "Один раз пришлось даже переждать в закрытой ремонтной мастерской, пока подозрительная машина не уехала."
-    "At one point, you even had to wait inside a closed repair shop until a suspicious vehicle finally drove away."
+    "At one point, you even had to wait it out inside a closed repair shop until a suspicious vehicle drove away."
 
 # game/communications/micko/day3_micko.rpy:105
 translate english day3_hangout_mikko_2e53c091:
@@ -144,8 +144,7 @@ translate english day3_hangout_mikko_2e53c091:
     # "К полуночи всё было закончено."
     "By midnight, everything was done."
 
-# game/communications/micko/day3_micko.rpy:107
-translate english day3_hangout_mikko_7348bd12:
+# game/communications/micko/day3_hangout_mikko_7348bd12:
 
     # "На прощание Микко впервые за вечер улыбнулся и сказал, что теперь у него появился шанс пережить эту неделю."
-    "As you parted ways, Mikko smiled for the first time that evening and said that now he might actually have a chance to make it through the week."
+    "Before saying goodbye, Mikko smiled for the first time that evening and said that now he had a chance of making it through the week."

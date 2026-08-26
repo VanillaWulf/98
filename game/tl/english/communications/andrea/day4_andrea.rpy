@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/andrea/day4_andrea.rpy:5
 translate english day4_call_andrea_bb8e4b4e:
@@ -16,4 +16,4 @@ translate english day4_call_andrea_320ef32f:
 translate english day4_call_andrea_38afdf0e:
 
     # k "Я думаю все новости можно узнать у Нонни"
-    k "I think I can get any updates from Nonni."
+    k "I think you can get all the updates from Nonni."

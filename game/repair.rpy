@@ -1,13 +1,13 @@
 label repair_menu:
     if actions > 0:
         menu:
-            "[clients['nonni']['name']] - [clients['nonni']['order_name']]" if clients["nonni"]["order_active"] and not clients["nonni"]["order_completed"]:
+            "[clients['nonni']['name_ru']] - [clients['nonni']['order_name_ru']]" if clients["nonni"]["order_active"] and not clients["nonni"]["order_completed"]:
                 jump repair_nonni
-            "[clients['linh']['name']] - [clients['linh']['order_name']]" if clients["linh"]["order_active"] and not clients["linh"]["order_completed"]:
+            "[clients['linh']['name_ru']] - [clients['linh']['order_name_ru']]" if clients["linh"]["order_active"] and not clients["linh"]["order_completed"]:
                 jump repair_linchi
-            "[clients['bekker']['name']] - [clients['bekker']['order_name']]" if clients["bekker"]["order_active"] and not clients["bekker"]["order_completed"]:
+            "[clients['bekker']['name_ru']] - [clients['bekker']['order_name_ru']]" if clients["bekker"]["order_active"] and not clients["bekker"]["order_completed"]:
                 jump repair_becker
-            "[clients['ivo']['name']] - [clients['ivo']['order_name']]" if clients["ivo"]["order_active"] and not clients["ivo"]["order_completed"]:
+            "[clients['ivo']['name_ru']] - [clients['ivo']['order_name_ru']]" if clients["ivo"]["order_active"] and not clients["ivo"]["order_completed"]:
                 jump repair_ivo
             "Назад":
                 jump evening_menu

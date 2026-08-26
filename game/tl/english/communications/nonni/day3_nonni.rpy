@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/nonni/day3_nonni.rpy:6
 translate english day3_call_nonni_bb2cf764:
@@ -16,7 +16,7 @@ translate english day3_call_nonni_d2f73f59:
 translate english day3_call_nonni_fac204c1:
 
     # k "Я ее серьезно достал в этот раз"
-    k "I really pushed her too far this time."
+    k "I really got on her nerves this time."
 
 # game/communications/nonni/day3_nonni.rpy:14
 translate english day3_call_nonni_bb2cf764_1:
@@ -34,7 +34,7 @@ translate english day3_call_nonni_d2f73f59_1:
 translate english day3_call_nonni_1c95312d:
 
     # n "Квист, ты бросил Андрею лежать неизвестно где."
-    n "Kvist, you left Andrea lying somewhere, who knows where."
+    n "Kvist, you left Andrea lying somewhere out there."
 
 # game/communications/nonni/day3_nonni.rpy:33
 translate english day3_call_nonni_3ca898a1:
@@ -46,13 +46,13 @@ translate english day3_call_nonni_3ca898a1:
 translate english day3_call_nonni_c5fee8ae:
 
     # n "И жалею, что вообще пила вино с таким козлом."
-    n "And I regret ever drinking wine with a jerk like you."
+    n "And I regret ever drinking wine with an asshole like you."
 
 # game/communications/nonni/day3_nonni.rpy:38
 translate english day3_call_nonni_1dfee6e4:
 
     # n "Квист, ты бросил Андрею."
-    n "Kvist, you abandoned Andrea."
+    n "Kvist, you left Andrea."
 
 # game/communications/nonni/day3_nonni.rpy:39
 translate english day3_call_nonni_0f43e1ad:
@@ -70,7 +70,7 @@ translate english day3_call_nonni_3ca898a1_1:
 translate english day3_call_nonni_1dfee6e4_1:
 
     # n "Квист, ты бросил Андрею."
-    n "Kvist, you abandoned Andrea."
+    n "Kvist, you left Andrea."
 
 # game/communications/nonni/day3_nonni.rpy:45
 translate english day3_call_nonni_3ca898a1_2:
@@ -94,7 +94,7 @@ translate english day3_call_nonni_9c387469:
 translate english day3_call_nonni_72d99c25:
 
     # n "Своим людям я помогу всем, чем смогу."
-    n "I'll help my people in any way I can."
+    n "I'll do whatever I can to help my people."
 
 # game/communications/nonni/day3_nonni.rpy:66
 translate english day3_call_nonni_61cd3d4f:
@@ -106,7 +106,7 @@ translate english day3_call_nonni_61cd3d4f:
 translate english day3_call_nonni_72d99c25_1:
 
     # n "Своим людям я помогу всем, чем смогу."
-    n "I'll help my people in any way I can."
+    n "I'll do whatever I can to help my people."
 
 # game/communications/nonni/day3_nonni.rpy:71
 translate english day3_call_nonni_90accb28:
@@ -124,13 +124,13 @@ translate english day3_call_nonni_7f0955d1:
 translate english day3_call_nonni_1bc9f690:
 
     # n "Андреа сейчас спит. Пока всё стабильно."
-    n "Andrea is sleeping right now. Everything is stable for the moment."
+    n "Andrea is sleeping right now. She's stable for now."
 
 # game/communications/nonni/day3_nonni.rpy:78
 translate english day3_call_nonni_21f8a976:
 
     # n "Но аппарат нужен."
-    n "But we need the device."
+    n "But we need the machine."
 
 # game/communications/nonni/day3_nonni.rpy:79
 translate english day3_call_nonni_2961c73b:
@@ -142,7 +142,7 @@ translate english day3_call_nonni_2961c73b:
 translate english day3_call_nonni_b2905fd0:
 
     # n "Аппарат готов?"
-    n "Is the device ready?"
+    n "Is the machine ready?"
 
 # game/communications/nonni/day3_nonni.rpy:87
 translate english day3_call_nonni_11fdb519:
@@ -196,7 +196,7 @@ translate english day3_call_nonni_35b1ded8:
 translate english day3_call_nonni_c9412f64:
 
     # n "Но сейчас не до этого."
-    n "But we have bigger concerns right now."
+    n "But this isn't the time for that."
 
 # game/communications/nonni/day3_nonni.rpy:134
 translate english day3_call_nonni_b8a75518:
@@ -214,7 +214,7 @@ translate english day3_call_nonni_53c74058:
 translate english day3_call_nonni_3d0d44c4:
 
     # n "Как аппарат?"
-    n "How's the device?"
+    n "How's the machine?"
 
 # game/communications/nonni/day3_nonni.rpy:145
 translate english day3_call_nonni_29c9d789:
@@ -244,7 +244,7 @@ translate english day3_call_nonni_b1d70100:
 translate english day3_call_nonni_509445c4:
 
     # n "Я надеюсь, что аппарат наконец готов."
-    n "I hope the device is finally ready."
+    n "I hope the machine is finally ready."
 
 # game/communications/nonni/day3_nonni.rpy:160
 translate english day3_call_nonni_11fdb519_1:
@@ -262,7 +262,7 @@ translate english day3_call_nonni_54c5f5f0:
 translate english day3_call_nonni_e6a51aa4:
 
     # n "Второй звонок оказался не зря."
-    n "Looks like the second call was worth it."
+    n "The second call was worth it after all."
 
 # game/communications/nonni/day3_nonni.rpy:171
 translate english day3_call_nonni_4bf20554_1:
@@ -280,13 +280,13 @@ translate english day3_call_nonni_4eb31077_1:
 translate english day3_call_nonni_a3c8e664:
 
     # n "Я уже начала думать, что ты звонишь просто поболтать."
-    n "I was starting to think you were calling just to chat."
+    n "I was starting to think you were just calling to chat."
 
 # game/communications/nonni/day3_nonni.rpy:183
 translate english day3_call_nonni_3f0afd3e:
 
     # n "Ладно. Пятнадцать так пятнадцать."
-    n "Fine. Fifteen it is."
+    n "Fine. Fifteen is fifteen."
 
 # game/communications/nonni/day3_nonni.rpy:193
 translate english day3_call_nonni_86bf3c8f_1:
@@ -298,7 +298,7 @@ translate english day3_call_nonni_86bf3c8f_1:
 translate english day3_call_nonni_2b1cdbf2:
 
     # n "Андрея в больнице, а ты всё ещё пытаешься заработать."
-    n "Andrea is in the hospital, and you're still trying to make a profit."
+    n "Andrea is in the hospital, and you're still trying to make money."
 
 # game/communications/nonni/day3_nonni.rpy:195
 translate english day3_call_nonni_f65e340a:
@@ -316,7 +316,7 @@ translate english day3_call_nonni_800ce7a0:
 translate english day3_call_nonni_174c211a:
 
     # n "Я понимаю, что переживаешь."
-    n "I understand you're worried."
+    n "I understand that you're worried."
 
 # game/communications/nonni/day3_nonni.rpy:211
 translate english day3_call_nonni_bede6847:
@@ -328,7 +328,7 @@ translate english day3_call_nonni_bede6847:
 translate english day3_call_nonni_9b266392:
 
     # n "Квист, ты издеваешься?"
-    n "Kvist, are you messing with me?"
+    n "Kvist, are you kidding me?"
 
 # game/communications/nonni/day3_nonni.rpy:221
 translate english day3_call_nonni_eab94534:
@@ -352,7 +352,7 @@ translate english day3_call_nonni_24ab07a8:
 translate english day3_call_nonni_f48560af:
 
     # n "Я очень надеюсь, что аппарат наконец готов."
-    n "I really hope the device is finally ready."
+    n "I really hope the machine is finally ready."
 
 # game/communications/nonni/day3_nonni.rpy:235
 translate english day3_call_nonni_11fdb519_2:
@@ -400,7 +400,7 @@ translate english day3_call_nonni_af77f41d:
 translate english day3_call_nonni_bd01ace1:
 
     # n "Хотя бы аппарат готов."
-    n "At least the device is ready."
+    n "At least the machine is ready."
 
 # game/communications/nonni/day3_nonni.rpy:258
 translate english day3_call_nonni_0f9d4433:
@@ -430,7 +430,7 @@ translate english day3_call_nonni_d86e7e58:
 translate english day3_call_nonni_c44439b2:
 
     # n "Знаешь, сейчас я даже спорить не хочу."
-    n "You know what? I don't even want to argue right now."
+    n "You know, I don't even want to argue right now."
 
 # game/communications/nonni/day3_nonni.rpy:272
 translate english day3_call_nonni_0f9d4433_1:
@@ -442,7 +442,7 @@ translate english strings:
 
     # game/communications/nonni/day3_nonni.rpy:90
     old "Отдать бесплатно"
-    new "Give it away for free"
+    new "Give it for free"
 
     # game/communications/nonni/day3_nonni.rpy:99
     old "15 кредитов"

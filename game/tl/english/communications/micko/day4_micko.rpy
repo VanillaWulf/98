@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/micko/day4_micko.rpy:8
 translate english day4_call_mikko_e612037c:
@@ -46,13 +46,13 @@ translate english day4_call_mikko_9c00caf9:
 translate english day4_call_mikko_ff420f81:
 
     # m "Без тебя я бы сейчас не знаю, где бы был"
-    m "Without you, I don't know where I'd be right now."
+    m "I don't know where I'd be right now without you."
 
 # game/communications/micko/day4_micko.rpy:40
 translate english day4_call_mikko_3bed71ad:
 
     # m "Кстати. Я слышал про Андрею. Если совсем прижмёт, могу достать похожий аппарат."
-    m "By the way. I heard about Andrea. If things get really bad, I can get a similar device."
+    m "By the way. I heard about Andrea. If things get really desperate, I can get a similar device."
 
 # game/communications/micko/day4_micko.rpy:41
 translate english day4_call_mikko_37cf20a2:
@@ -70,13 +70,13 @@ translate english day4_call_mikko_25ccefc1:
 translate english day4_call_mikko_8fa2ff22:
 
     # m "Если аппарат уже готов, могу помочь его быстро довезти."
-    m "If the device is already ready, I can help deliver it quickly."
+    m "If the device is ready, I can help get it delivered quickly."
 
 # game/communications/micko/day4_micko.rpy:47
 translate english day4_call_mikko_c9de4c23:
 
     # m "Я сейчас как раз стараюсь не сидеть на одном месте."
-    m "I'm trying not to stay in one place for too long these days."
+    m "I'm trying not to stay in one place right now anyway."
 
 # game/communications/micko/day4_micko.rpy:52
 translate english day4_call_mikko_91ae50a7:
@@ -94,13 +94,13 @@ translate english day4_call_mikko_94420ba9:
 translate english day4_call_mikko_de4bb9f2:
 
     # m "На лекартва? Давай подзаработаем на них. Приезжай ко мне расскажу"
-    m "Need money for medicine? Let's earn some. Come see me and I'll explain."
+    m "For medicine? Let's make some money off them. Come over and I'll tell you about it."
 
 # game/communications/micko/day4_micko.rpy:55
 translate english day4_call_mikko_12421920:
 
     # m "Держи. У меня еще дома есть флешка с кредитами, заскочешь отдам за так"
-    m "Here. I've also got a credit stick at home. Drop by and I'll give it to you for free."
+    m "Here. I've got another flash drive with credits at home. Stop by and I'll give it to you for free."
 
 # game/communications/micko/day4_micko.rpy:58
 translate english day4_call_mikko_0299555d:
@@ -112,7 +112,7 @@ translate english day4_call_mikko_0299555d:
 translate english day4_call_mikko_4e2514f0:
 
     # m "Немного, но сейчас пригодится."
-    m "Not much, but it'll help right now."
+    m "It's not much, but it'll come in handy right now."
 
 # game/communications/micko/day4_micko.rpy:61
 translate english day4_call_mikko_3d82ad3d:
@@ -136,7 +136,7 @@ translate english day4_call_mikko_8e68e31e_2:
 translate english day4_hangout_mikko_35294075:
 
     # "Заскочил к Микко отдал флешку"
-    "You stopped by Mikko's place and he handed over the credit stick."
+    "You stopped by Mikko's place and gave him the flash drive."
 
 # game/communications/micko/day4_micko.rpy:81
 translate english day4_hangout_mikko_86840f03:
@@ -148,13 +148,13 @@ translate english day4_hangout_mikko_86840f03:
 translate english day4_hangout_mikko_b1593d82:
 
     # m "Без 15 кредитов никак, на что аппарат купим."
-    m "We can't do it without 15 credits. How else are we supposed to buy the device?"
+    m "We need 15 credits. Otherwise, how are we going to buy the device?"
 
 # game/communications/micko/day4_micko.rpy:94
 translate english day4_hangout_mikko_2d4a6701:
 
     # "Вечером вы вместе с Микко отправились за аппаратом через половину Старого Центра."
-    "That evening, you and Mikko crossed half of the Old Center to pick up the device."
+    "That evening, you and Mikko crossed half of the Old Center to get the device."
 
 # game/communications/micko/day4_micko.rpy:96
 translate english day4_hangout_mikko_22e9ac3e:
@@ -166,25 +166,25 @@ translate english day4_hangout_mikko_22e9ac3e:
 translate english day4_hangout_mikko_e2c817ff:
 
     # "Пока Микко торговался, продавец успел трижды передумать насчёт цены и дважды предложить купить что-нибудь ещё."
-    "While Mikko haggled, the seller changed his mind about the price three times and tried twice to sell you something else."
+    "While Mikko was haggling, the seller changed his mind about the price three times and offered to sell them something else twice."
 
 # game/communications/micko/day4_micko.rpy:100
 translate english day4_hangout_mikko_a63ebd77:
 
     # "В конце концов сделка состоялась, аппарат погрузили на тележку и поспешили уехать, пока никто не передумал снова."
-    "Eventually the deal went through. The device was loaded onto a cart, and you hurried away before anyone changed their mind again."
+    "Eventually, the deal was done. You loaded the device onto a cart and hurried away before anyone could change their mind again."
 
 # game/communications/micko/day4_micko.rpy:102
 translate english day4_hangout_mikko_c58762dc:
 
     # "По дороге обратно Микко выглядел заметно спокойнее, чем в последние дни."
-    "On the way back, Mikko looked noticeably calmer than he had in recent days."
+    m "On the way back, Mikko looked noticeably calmer than he had over the past few days."
 
 # game/communications/micko/day4_micko.rpy:104
 translate english day4_hangout_mikko_45305761:
 
     # "Похоже, впервые за долгое время всё прошло почти по плану."
-    "For the first time in a long while, things had gone almost according to plan."
+    "For the first time in a long while, it seemed like almost everything had gone according to plan."
 
 # game/communications/micko/day4_micko.rpy:109
 translate english day4_hangout_mikko_fff3a43e:
@@ -208,4 +208,4 @@ translate english day4_hangout_mikko_8e68e31e:
 translate english day4_hangout_mikko_6a3cc947:
 
     # k "Я к нему не поеду, если он не отвечает, он может быть занят... или пропал?"
-    k "I'm not going over there if he's not answering. He could be busy... or missing?"
+    k "I'm not going to his place if he isn't answering. He could be busy... or maybe he's disappeared?"

@@ -58,7 +58,7 @@ label day4_start:
     $ clients["ivo"]["order_active"] = True
     $ clients["ivo"]["order_completed"] = False
     play sound "order.mp3" noloop
-    "Добавлен новый заказ: [clients['ivo']['name']] - [clients['ivo']['order_name']]"
+    "Добавлен новый заказ: [tr('ivo', 'name')] - [tr('ivo', 'order_name')]"
 
     i "Спасибо. И... как Андреа?"
 

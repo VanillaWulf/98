@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/nonni/day1_nonni.rpy:7
 translate english day1_call_nonni_b844af8b:
@@ -16,13 +16,13 @@ translate english day1_call_nonni_11fdb519:
 translate english day1_call_nonni_a355c8f1:
 
     # n "Звони, когда починишь, не отвлекай меня"
-    n "Call me when you've fixed it. Don't distract me."
+    n "Call me when you fix it. Don't distract me."
 
 # game/communications/nonni/day1_nonni.rpy:18
 translate english day1_call_nonni_43f75689:
 
     # n "Ты просто душка"
-    n "You're a sweetheart."
+    n "You're such a sweetheart."
 
 # game/communications/nonni/day1_nonni.rpy:27
 translate english day1_call_nonni_4eb31077:
@@ -46,19 +46,19 @@ translate english day1_call_nonni_86bf3c8f:
 translate english day1_call_nonni_707cc54c:
 
     # n "Ну ты и жук"
-    n "You're quite the hustler."
+    n "You little rascal."
 
 # game/communications/nonni/day1_nonni.rpy:41
 translate english day1_call_nonni_f7d1a667:
 
     # k "Не готов"
-    k "It's not ready."
+    k "Not ready."
 
 # game/communications/nonni/day1_nonni.rpy:42
 translate english day1_call_nonni_a355c8f1_1:
 
     # n "Звони, когда починишь, не отвлекай меня"
-    n "Call me when you've fixed it. Don't distract me."
+    n "Call me when you fix it. Don't distract me."
 
 # game/communications/nonni/day1_nonni.rpy:48
 translate english day1_call_nonni_e31275f6:
@@ -82,13 +82,13 @@ translate english day1_call_nonni_11fdb519_1:
 translate english day1_call_nonni_54cb0e81:
 
     # n "Ты понимаешь, что я тут жизни спасаю, а ты с херней мне звонишь?!"
-    n "Do you realize I'm saving lives here, and you're calling me with this nonsense?!"
+    n "Do you realize I'm saving lives here, and you're calling me about this shit?!"
 
 # game/communications/nonni/day1_nonni.rpy:59
 translate english day1_call_nonni_43f75689_1:
 
     # n "Ты просто душка"
-    n "You're a sweetheart."
+    n "You're such a sweetheart."
 
 # game/communications/nonni/day1_nonni.rpy:68
 translate english day1_call_nonni_4eb31077_1:
@@ -112,7 +112,7 @@ translate english day1_call_nonni_86bf3c8f_1:
 translate english day1_call_nonni_707cc54c_1:
 
     # n "Ну ты и жук"
-    n "You're quite the hustler."
+    n "You little rascal."
 
 # game/communications/nonni/day1_nonni.rpy:83
 translate english day1_call_nonni_ed4dd1f7:
@@ -136,7 +136,7 @@ translate english day1_call_nonni_55290f74:
 translate english day1_call_nonni_2188463f:
 
     # n "Ты придурок? Звонишь по несколько раз, чтобы мне об этом сказать?!"
-    n "Are you an idiot? You're calling me multiple times just to tell me that?!"
+    n "Are you an idiot? You're calling me over and over just to tell me that?!"
 
 # game/communications/nonni/day1_nonni.rpy:93
 translate english day1_call_nonni_bb2cf764:
@@ -154,8 +154,8 @@ translate english strings:
 
     # game/communications/nonni/day1_nonni.rpy:29
     old "Готов 20$"
-    new "Ready, 20 credits"
+    new "Ready, 20$"
 
     # game/communications/nonni/day1_nonni.rpy:70
     old "Готов 20"
-    new "Ready, 20 credits"
+    new "Ready, 20"

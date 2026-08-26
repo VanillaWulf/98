@@ -1,13 +1,13 @@
 label phone_menu:
     scene bg kvist
     menu:
-        "Нонни - [clients['nonni']['description']]":
+        "[clients['nonni']['name_ru']] - [clients['nonni']['description_ru']]":
             jump expression "day" + str(current_day) + "_call_nonni"
-        "Беккер - [clients['bekker']['description']]":
+        "[clients['bekker']['name_ru']] - [clients['bekker']['description_ru']]":
             jump expression "day" + str(current_day) + "_call_becker"
-        "Микко - [clients['mikko']['description']]":
+        "[clients['mikko']['name_ru']] - [clients['mikko']['description_ru']]":
             jump expression "day" + str(current_day) + "_call_mikko"
-        "Андреа - [clients['andrea']['description']]":
+        "[clients['andrea']['name_ru']] - [clients['andrea']['description_ru']]":
             jump expression "day" + str(current_day) + "_call_andrea"
         "Назад":
             jump evening_menu

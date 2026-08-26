@@ -1,10 +1,10 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/evening.rpy:3
 translate english evening_menu_03ce1951:
 
     # "Кажется сегодня больше никто не придет, время сделать заказы и позвонить."
-    "Looks like nobody else is coming today. Time to finish some orders and make a few calls."
+    "Looks like no one else is coming today. Time to place some orders and make some calls."
 
 # game/evening.rpy:5
 translate english evening_menu_11fdb519:
@@ -16,19 +16,19 @@ translate english evening_menu_11fdb519:
 translate english evening_menu_41e49170:
 
     # k "И что же ты собрался везти к Нонни, друг?"
-    k "And what exactly are you planning to bring to Nonni, my friend?"
+    k "And what exactly are you planning to bring to Nonni, buddy?"
 
 # game/evening.rpy:21
 translate english evening_menu_7fa649a4:
 
     # k "Если ты приедеешь без аппарата, она будет пострашнее Линь Чи"
-    k "If you show up without the machine, she'll be scarier than Lin Chi."
+    k "If you show up without the device, she'll be scarier than Lin Chi."
 
 translate english strings:
 
     # game/evening.rpy:6
     old "Позвонить"
-    new "Make Calls"
+    new "Make a call"
 
     # game/evening.rpy:8
     old "Ремонтировать (-1 действие)"
@@ -36,15 +36,15 @@ translate english strings:
 
     # game/evening.rpy:10
     old "Встретиться с Микко (-1 действие и вернёшься уже завтра)"
-    new "Meet Mikko (-1 action, return tomorrow)"
+    new "Meet Mikko (-1 action and you'll return tomorrow)"
 
     # game/evening.rpy:12
     old "Ждать на вино к Нонни (-1 действие, на это потребуются силы)"
-    new "Visit Nonni for Wine (-1 action, requires energy)"
+    new "Wait for wine with Nonni (-1 action, this will take some energy)"
 
     # game/evening.rpy:14
     old "Забрать Андрею из Даров моря (-2 действия)"
-    new "Pick Up Andrea from The Sea's Gifts (-2 actions)"
+    new "Pick up Andrea from Sea of Gifts (-2 actions)"
 
     # game/evening.rpy:16
     old "Поговорить с Иво"
@@ -52,8 +52,8 @@ translate english strings:
 
     # game/evening.rpy:18
     old "Отвезти аппарат к Нонни (-1 действие и вернёшься уже завтра)"
-    new "Deliver the Machine to Nonni (-1 action, return tomorrow)"
+    new "Bring the device to Nonni (-1 action and you'll return tomorrow)"
 
     # game/evening.rpy:25
     old "Спать (восстановит действия и запустить новый день)"
-    new "Sleep (restore actions and start a new day)"
+    new "Sleep (restore your actions and start a new day)"

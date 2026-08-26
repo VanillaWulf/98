@@ -1,5 +1,4 @@
-﻿
-# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/bekker/day1_bekker.rpy:7
 translate english day1_call_becker_850ef128:
@@ -11,19 +10,19 @@ translate english day1_call_becker_850ef128:
 translate english day1_call_becker_3d89d6e4:
 
     # "Беккер не отвечает."
-    "Bekker doesn't answer."
+    "Becker doesn't answer."
 
 # game/communications/bekker/day1_bekker.rpy:9
 translate english day1_call_becker_1ba65a4c:
 
     # k "Надеюсь, он не разолзлился"
-    k "I hope he isn't too angry."
+    k "I hope he hasn't fallen apart."
 
 # game/communications/bekker/day1_bekker.rpy:18
 translate english day1_call_becker_b6a917c8:
 
     # b "Слушаю. Если нужны детали всегда рад помочь, но завтра смогу подвезти только 1 микросхему = [price]$. Берешь?"
-    b "I'm listening. If you need parts, I'm always happy to help. Tomorrow I can only bring one microchip for [price] credits. You taking it?"
+    b "I'm listening. If you need parts, I'm always happy to help, but tomorrow I can only bring one chip for [price]$. You in?"
 
 # game/communications/bekker/day1_bekker.rpy:20
 translate english day1_call_becker_11fdb519:
@@ -41,25 +40,25 @@ translate english day1_call_becker_5583a925:
 translate english day1_call_becker_9ae634d1:
 
     # "Вы отправили кредиты - [clients['bekker']['base_price']] штук"
-    "You transferred [clients['bekker']['base_price']] credits."
+    "You sent [clients['bekker']['base_price']] credits."
 
 # game/communications/bekker/day1_bekker.rpy:28
 translate english day1_call_becker_e0e1c09d:
 
     # b "Два раза не предлагаю"
-    b "I don't make the same offer twice."
+    b "I won't offer twice."
 
 # game/communications/bekker/day1_bekker.rpy:32
 translate english day1_call_becker_06cc8be2:
 
     # b "Мы вроде уже поговорили - на неделе пополню ассортимент. Ничего нового не скажу"
-    b "I think we've already talked about this. I'll restock during the week. Nothing new to add."
+    b "I think we've already talked about this. I'll restock sometime this week. Nothing new to add."
 
 # game/communications/bekker/day1_bekker.rpy:36
 translate english day1_call_becker_82e3111b:
 
     # b "Ты со мной так не шути, папаша, я могу и разозлиться"
-    b "Don't joke around with me like that, old man. I might actually get angry."
+    b "Don't joke with me like that, old man. I might get pissed off."
 
 translate english strings:
 
@@ -69,4 +68,4 @@ translate english strings:
 
     # game/communications/bekker/day1_bekker.rpy:27
     old "Не, в другой раз"
-    new "Nah, maybe another time"
+    new "Nah, another time"

@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 # game/communications/nonni/day2_nonni_hangout.rpy:8
 translate english day2_noni_hangout_40967574:
@@ -22,31 +22,31 @@ translate english day2_noni_hangout_7d683292:
 translate english day2_noni_hangout_9346c7b4:
 
     # "За окном дождь усиливался"
-    "Outside, the rain kept getting heavier."
+    "Outside, the rain grew heavier."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:13
 translate english day2_noni_hangout_6a13503f:
 
     # "В мастерской тепло, пахнет пылью старой электроники, кофе и лекарственными травами, которые Нонни зачем-то постоянно приносит с собой."
-    "The workshop is warm, filled with the scent of dusty old electronics, coffee, and medicinal herbs that Nonni always seems to carry with her for some reason."
+    "The workshop is warm, filled with the smell of old electronics, coffee, and medicinal herbs that Nonni keeps bringing with her for some reason."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:14
 translate english day2_noni_hangout_9bb4fff4:
 
     # "На какое-то время и Квист, и Нонни почти забывают, в каком городе живут."
-    "For a little while, both Kvist and Nonni almost forget what kind of city they live in."
+    "For a while, both Kvist and Nonni almost forget what kind of city they live in."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:15
 translate english day2_noni_hangout_1c2586df:
 
     # "Будто они оказались персонажами старых книг или старых фильмов."
-    "As if they had become characters from old books or old movies."
+    "As if they had become characters in old books or old movies."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:16
 translate english day2_noni_hangout_b84ea852:
 
     # "Тех самых, где люди могли спокойно сидеть вечером на кухне, не ожидая аварии, проверки ОКБР или очередной городской катастрофы."
-    "The kind where people could sit peacefully in the kitchen in the evening without expecting an accident, an OKBR inspection, or the next city-wide disaster."
+    "The kind where people could sit quietly in a kitchen in the evening without expecting an accident, an OKBR inspection, or yet another citywide disaster."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:19
 translate english day2_noni_hangout_9e45d9ff:
@@ -58,7 +58,7 @@ translate english day2_noni_hangout_9e45d9ff:
 translate english day2_noni_hangout_ec3a62bf:
 
     # n "Совсем забыла. Привезли пациента, это ему уже не надо, А тебе пригодятся."
-    n "Almost forgot. We admitted a patient, and he doesn't need these anymore. You might find them useful."
+    n "I almost forgot. They brought in a patient, and he doesn't need these anymore. But they'll come in handy for you."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:21
 translate english day2_noni_hangout_eddcda92:
@@ -76,7 +76,7 @@ translate english day2_noni_hangout_a1450235:
 translate english day2_noni_hangout_d7c60ced:
 
     # "Нонни несколько секунд молча смотрит на Квиста."
-    "Nonni silently looks at Kvist for a few seconds."
+    "Nonni looks at Kvist silently for a few seconds."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:31
 translate english day2_noni_hangout_4753cd1c:
@@ -88,19 +88,19 @@ translate english day2_noni_hangout_4753cd1c:
 translate english day2_noni_hangout_79611696:
 
     # n "Спасибо за тот ремонт."
-    n "Thanks for that repair."
+    n "Thanks for fixing that."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:33
 translate english day2_noni_hangout_41b9ca9d:
 
     # "Она неожиданно наклоняется и целует Квиста в щёку."
-    "She unexpectedly leans in and kisses Kvist on the cheek."
+    "She suddenly leans in and kisses Kvist on the cheek."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:34
 translate english day2_noni_hangout_1508b841:
 
     # "Квист явно не успевает подготовиться к такому развитию событий."
-    "Kvist is clearly not prepared for that turn of events."
+    "Kvist clearly isn't prepared for this turn of events."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:35
 translate english day2_noni_hangout_9f87f1b8:
@@ -112,7 +112,7 @@ translate english day2_noni_hangout_9f87f1b8:
 translate english day2_noni_hangout_264f452e:
 
     # n "Я врач. Мне можно."
-    n "I'm a doctor. I'm allowed."
+    n "I'm a doctor. I'm allowed to."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:37
 translate english day2_noni_hangout_6c2d5b75:
@@ -124,13 +124,13 @@ translate english day2_noni_hangout_6c2d5b75:
 translate english day2_noni_hangout_ca766b6c:
 
     # n "Ладно, у меня ещё половина района не вылечена. Увидимся."
-    n "All right, I've still got half the district left to treat. See you."
+    n "Alright, half the neighborhood still needs treating. See you."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:41
 translate english day2_noni_hangout_b8df19e3:
 
     # n "И спасибо за помощь."
-    n "And thank you for your help."
+    n "And thanks for the help."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:42
 translate english day2_noni_hangout_6d8261c5:
@@ -154,13 +154,13 @@ translate english day2_noni_hangout_15cd0387:
 translate english day2_noni_hangout_0c183bb0:
 
     # k "Ничего не обещаю."
-    k "No promises."
+    k "I can't promise that."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:46
 translate english day2_noni_hangout_981b28ff:
 
     # n "Вот поэтому я и переживаю."
-    n "That's exactly why I worry."
+    n "That's exactly why I'm worried about you."
 
 # game/communications/nonni/day2_nonni_hangout.rpy:47
 translate english day2_noni_hangout_56c40373:

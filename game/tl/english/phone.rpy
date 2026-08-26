@@ -1,19 +1,19 @@
-﻿# TODO: Translation updated at 2026-06-22 13:15
+﻿# TODO: Translation updated at 2026-08-25 17:29
 
 translate english strings:
 
     # game/phone.rpy:4
-    old "Нонни - [clients['nonni']['description']]"
-    new "Nonni - [clients['nonni']['description']]"
+    old "[clients['nonni']['name_ru']] - [clients['nonni']['description_ru']]"
+    new "[clients['nonni']['name_eng']] - [clients['nonni']['description_en']]"
 
     # game/phone.rpy:6
-    old "Беккер - [clients['bekker']['description']]"
-    new "Becker - [clients['bekker']['description']]"
+    old "[clients['bekker']['name_ru']] - [clients['bekker']['description_ru']]"
+    new "[clients['bekker']['name_eng']] - [clients['bekker']['description_en']]"
 
     # game/phone.rpy:8
-    old "Микко - [clients['mikko']['description']]"
-    new "Mikko - [clients['mikko']['description']]"
+    old "[clients['mikko']['name_ru']] - [clients['mikko']['description_ru']]"
+    new "[clients['mikko']['name_eng']]  - [clients['mikko']['description_en']]"
 
     # game/phone.rpy:10
-    old "Андреа - [clients['andrea']['description']]"
-    new "Andrea - [clients['andrea']['description']]"
+    old "[clients['andrea']['name_ru']] - [clients['andrea']['description_ru']]"
+    new "[clients['andrea']['name_eng']] - [clients['andrea']['description_en']]"
