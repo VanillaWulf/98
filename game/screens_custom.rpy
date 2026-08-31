@@ -6,17 +6,6 @@ screen game_hud():
 
     zorder 100
 
-    # Локализуемые тексты
-    $ day_text = _("ДЕНЬ")
-    $ credits_text = _("КРЕДИТЫ")
-    $ actions_text = _("ДЕЙСТВИЯ")
-    $ stock_text = _("ЗАПАСЫ")
-    $ wires_text = _("ПРОВОДА")
-    $ chips_text = _("МИКРОСХЕМЫ")
-    $ orders_text = _("АКТИВНЫЕ ЗАКАЗЫ")
-    $ done_text = _("ГОТОВО")
-
-
     # =========================================================
     # ОСНОВНОЙ HUD
     # =========================================================
@@ -27,7 +16,7 @@ screen game_hud():
         yalign 0.00
 
         xsize 830
-        ysize 135
+        ysize 125
 
 
         # =====================================================
@@ -40,7 +29,7 @@ screen game_hud():
             ypos 0
 
             xsize 830
-            ysize 135
+            ysize 125
 
 
         # =====================================================
@@ -53,7 +42,7 @@ screen game_hud():
             ypos 10
 
             xsize 830
-            ysize 135
+            ysize 125
 
             spacing 0
 
@@ -68,7 +57,7 @@ screen game_hud():
                 ysize 135
 
 
-                text "[day_text]":
+                text _("ДЕНЬ"):
 
                     xpos 8
                     ypos 0
@@ -89,8 +78,8 @@ screen game_hud():
 
                     add "images/hud/icon_day.png":
 
-                        xsize 32
-                        ysize 32
+                        xsize 29
+                        ysize 29
 
                         yalign 0.5
 
@@ -129,7 +118,7 @@ screen game_hud():
                 ysize 135
 
 
-                text "[credits_text]":
+                text _("КРЕДИТЫ"):
 
                     xpos 5
                     ypos 0
@@ -190,7 +179,7 @@ screen game_hud():
                 ysize 135
 
 
-                text "[actions_text]":
+                text _("ДЕЙСТВИЯ"):
 
                     xpos 5
                     ypos 0
@@ -251,7 +240,7 @@ screen game_hud():
                 ysize 135
 
 
-                text "[stock_text]":
+                text _("ЗАПАСЫ"):
 
                     xpos 5
                     ypos 0
@@ -269,18 +258,18 @@ screen game_hud():
                 fixed:
 
                     xpos 5
-                    ypos 43
+                    ypos 25
 
                     xsize 50
                     ysize 80
 
 
-                    text "[wires_text]":
+                    text _("ПРОВОДА"):
 
                         xpos 0
                         ypos 0
 
-                        size 17
+                        size 14
                         bold True
 
                         color "#9EA4A7"
@@ -289,7 +278,7 @@ screen game_hud():
                     hbox:
 
                         xpos 0
-                        ypos 26
+                        ypos 25
 
                         spacing 4
 
@@ -319,7 +308,7 @@ screen game_hud():
                 frame:
 
                     xpos 130
-                    ypos 43
+                    ypos 25
 
                     xsize 1
                     ysize 60
@@ -334,18 +323,18 @@ screen game_hud():
                 fixed:
 
                     xpos 155
-                    ypos 43
+                    ypos 25
 
                     xsize 180
                     ysize 80
 
 
-                    text "[chips_text]":
+                    text _("МИКРОСХЕМЫ"):
 
                         xpos 0
                         ypos 0
 
-                        size 17
+                        size 14
                         bold True
 
                         color "#9EA4A7"
@@ -354,7 +343,7 @@ screen game_hud():
                     hbox:
 
                         xpos 0
-                        ypos 26
+                        ypos 25
 
                         spacing 4
 
@@ -380,117 +369,142 @@ screen game_hud():
     # ============================================================
 
     fixed:
-        xalign 0.965
-        yalign 0.025
 
-        xsize 500
+        xalign 0.965
+        yalign 0
+
+        xsize 350
         ysize 440
 
+
+        # --------------------------------------------------------
+        # ФОН
+        # --------------------------------------------------------
+
         add Solid("#050608C0"):
+
             xsize 500
             ysize 440
 
 
-        vbox:
-            xpos 24
-            ypos 20
+        # --------------------------------------------------------
+        # КОНТЕНТ
+        # --------------------------------------------------------
 
-            xsize 452
+        vbox:
+
+            xpos 15
+            ypos 15
+
+            xsize 400
+
             spacing 20
 
 
-            # Заголовок
-            text "[orders_text]":
+            # ====================================================
+            # ЗАГОЛОВОК
+            # ====================================================
+
+            text _("АКТИВНЫЕ ЗАКАЗЫ"):
+
                 size 27
                 bold True
-                color "#C4C8CA"
+                color "#9EA4A7"
 
                 outlines [
                     (1, "#00000090", 0, 1)
                 ]
 
 
-            # Список заказов
+            # ====================================================
+            # СПИСОК ЗАКАЗОВ
+            # ====================================================
+
             vbox:
+
                 xsize 452
                 spacing 0
+
 
                 for key, client in clients.items():
 
                     if client.get("order_active", False):
 
-                        $ completed = client.get("order_completed", False)
-                        $ client_name = tr(key, "name")
-                        $ order_name = tr(key, "order_name")
+                        $ completed = client.get(
+                            "order_completed",
+                            False
+                        )
 
+                        $ client_name = tr(
+                            key,
+                            "name"
+                        )
+
+                        $ order_name = tr(
+                            key,
+                            "order_name"
+                        )
+
+
+                        # =================================================
+                        # ОДИН ЗАКАЗ
+                        # =================================================
 
                         vbox:
+
                             xsize 452
-                            spacing 10
+
+                            spacing 8
 
 
-                            hbox:
-                                xsize 452
-                                spacing 12
+                            # ---------------------------------------------
+                            # ИМЯ КЛИЕНТА
+                            # ---------------------------------------------
+
+                            if completed:
+                                text "[client_name]":
+
+                                    size 24
+                                    bold True
+
+                                    color "#88B38A"
+
+                            else:
+
+                                text "[client_name]":
+
+                                    size 24
+                                    bold True
+
+                                    color "#C5A35E"
 
 
-                                # Индикатор
-                                if completed:
+                            # ---------------------------------------------
+                            # НАЗВАНИЕ ЗАКАЗА
+                            # ---------------------------------------------
 
-                                    add "images/ui/hud/icon_done.png":
-                                        xsize 30
-                                        ysize 30
-                                        yalign 0.15
+                            text "[order_name]":
 
-                                else:
+                                size 18
 
-                                    add "images/ui/hud/icon_order.png":
-                                        xsize 30
-                                        ysize 30
-                                        yalign 0.15
+                                color "#A2A8AA"
+                        
+                            # ---------------------------------------------
+                            # РАЗДЕЛИТЕЛЬ
+                            # ---------------------------------------------
 
-
-                                # Текст заказа
-                                vbox:
-                                    xsize 410
-                                    spacing 3
-
-                                    if completed:
-
-                                        text "[client_name]":
-                                            size 23
-                                            bold True
-                                            color "#88B38A"
-
-                                    else:
-
-                                        text "[client_name]":
-                                            size 23
-                                            bold True
-                                            color "#C5A35E"
-
-
-                                    text "[order_name]":
-                                        size 18
-                                        color "#A2A8AA"
-
-
-                                    if completed:
-
-                                        text "[done_text]":
-                                            size 13
-                                            bold True
-                                            color "#789F7A"
-
-
-                            # Разделитель
                             frame:
-                                xsize 452
+
+                                xsize 370
                                 ysize 1
 
                                 if completed:
+
                                     background "#789F7A45"
+
                                 else:
-                                    background "#C5A35E45"
+
+                                    background "#AEB4B722"
+
 
                             null height 14
