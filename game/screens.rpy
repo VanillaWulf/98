@@ -828,12 +828,17 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
             style "main_menu_button"
             action ShowMenu("preferences")
 
+        # ИСТОРИЯ
+        textbutton "ИСТОРИЯ":
+            style "main_menu_button"
+            action ShowMenu("history")
+
         # ОБ ИГРЕ
         textbutton "ОБ ИГРЕ":
             style "main_menu_button"
             action ShowMenu("about")
 
-        # ОБ ИГРЕ
+        # НАЗАД
         textbutton "НАЗАД":
             style "main_menu_button"
             action Return()
@@ -1506,88 +1511,238 @@ style slider_vbox:
 ##
 ## https://www.renpy.org/doc/html/history.html
 
-screen history():
+# screen history():
 
-    tag menu
+#     tag menu
 
-    ## Избегайте предсказывания этого экрана, так как он может быть очень
-    ## массивным.
-    predict False
+#     ## Избегайте предсказывания этого экрана, так как он может быть очень
+#     ## массивным.
+#     predict False
 
-    use game_menu(_("История"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
+#     use game_menu(_("История"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
 
-        style_prefix "history"
+#         style_prefix "history"
 
-        for h in _history_list:
+#         for h in _history_list:
 
-            window:
+#             window:
 
-                ## Это всё правильно уравняет, если history_height будет
-                ## установлен на None.
-                has fixed:
-                    yfit True
+#                 ## Это всё правильно уравняет, если history_height будет
+#                 ## установлен на None.
+#                 has fixed:
+#                     yfit True
 
-                if h.who:
+#                 if h.who:
 
-                    label h.who:
-                        style "history_name"
-                        substitute False
+#                     label h.who:
+#                         style "history_name"
+#                         substitute False
 
-                        ## Берёт цвет из who параметра персонажа, если он
-                        ## установлен.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
+#                         ## Берёт цвет из who параметра персонажа, если он
+#                         ## установлен.
+#                         if "color" in h.who_args:
+#                             text_color h.who_args["color"]
 
-                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                text what:
-                    substitute False
+#                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+#                 text what:
+#                     substitute False
 
-        if not _history_list:
-            label _("История диалогов пуста.")
+#         if not _history_list:
+#             label _("История диалогов пуста.")
 
 
-## Это определяет, какие теги могут отображаться на экране истории.
+# =========================================================
+# ЭКРАН ИСТОРИИ
+# =========================================================
 
 define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 
 
-style history_window is empty
+screen history():
 
-style history_name is gui_label
-style history_name_text is gui_label_text
-style history_text is gui_text
+    tag menu
 
-style history_label is gui_label
-style history_label_text is gui_label_text
+    # =====================================================
+    # ФОН
+    # =====================================================
 
-style history_window:
-    xfill True
-    ysize gui.history_height
+    add "menu_bg" xysize (config.screen_width, config.screen_height)
+
+
+    # =====================================================
+    # ЛЕВАЯ ПАНЕЛЬ
+    # =====================================================
+
+    text "CITY N98":
+        xpos 70
+        ypos 145
+        style "menu_title"
+
+    text "HISTORY LOG":
+        xpos 70
+        ypos 225
+        style "menu_subtitle"
+
+
+    # =====================================================
+    # ИСТОРИЯ — ПРАВАЯ ЧАСТЬ
+    # =====================================================
+
+    if _history_list:
+
+        viewport:
+
+            xpos 550
+            ypos 300
+
+            xsize 1080
+            ysize 545
+
+            mousewheel True
+            draggable True
+
+            scrollbars "vertical"
+
+            yinitial 1.0
+
+
+            vbox:
+
+                xsize 1010
+                spacing 26
+
+
+                for h in _history_list:
+
+                    vbox:
+
+                        xsize 980
+                        spacing 6
+
+
+                        # -----------------------------
+                        # ИМЯ
+                        # -----------------------------
+
+                        if h.who:
+
+                            text h.who:
+
+                                style "history_name"
+
+                                substitute False
+
+                                if "color" in h.who_args:
+                                    color h.who_args["color"]
+
+
+                        # -----------------------------
+                        # РЕПЛИКА
+                        # -----------------------------
+
+                        $ what = renpy.filter_text_tags(
+                            h.what,
+                            allow=gui.history_allow_tags
+                        )
+
+                        text what:
+
+                            style "history_text"
+
+                            substitute False
+
+
+    else:
+
+        text "ИСТОРИЯ ДИАЛОГОВ ПУСТА":
+
+            xpos 550
+            ypos 320
+
+            style "history_empty"
+
+
+    # =====================================================
+    # НАЗАД
+    # =====================================================
+
+    textbutton "НАЗАД":
+
+        style "main_menu_button"
+
+        xpos 70
+        ypos 865
+
+        action Return()
+
+# =========================================================
+# СТИЛИ ИСТОРИИ
+# =========================================================
 
 style history_name:
-    xpos gui.history_name_xpos
-    xanchor gui.history_name_xalign
-    ypos gui.history_name_ypos
-    xsize gui.history_name_width
 
-style history_name_text:
-    min_width gui.history_name_width
-    textalign gui.history_name_xalign
+    font "fonts/DejaVuSans.ttf"
+    size 21
+    color "#00b8ed"
+    bold True
+
 
 style history_text:
-    xpos gui.history_text_xpos
-    ypos gui.history_text_ypos
-    xanchor gui.history_text_xalign
-    xsize gui.history_text_width
-    min_width gui.history_text_width
-    textalign gui.history_text_xalign
-    layout ("subtitle" if gui.history_text_xalign else "tex")
+    font "fonts/DejaVuSans.ttf"
+    size 23
+    color "#b7b9bb"
+    line_spacing 5
 
-style history_label:
-    xfill True
 
-style history_label_text:
-    xalign 0.5
+style history_empty:
+    font "fonts/DejaVuSans.ttf"
+    size 22
+    color "#697278"
+
+
+
+## Это определяет, какие теги могут отображаться на экране истории.
+
+# define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
+
+
+# style history_window is empty
+
+# style history_name is gui_label
+# style history_name_text is gui_label_text
+# style history_text is gui_text
+
+# style history_label is gui_label
+# style history_label_text is gui_label_text
+
+# style history_window:
+#     xfill True
+#     ysize gui.history_height
+
+# style history_name:
+#     xpos gui.history_name_xpos
+#     xanchor gui.history_name_xalign
+#     ypos gui.history_name_ypos
+#     xsize gui.history_name_width
+
+# style history_name_text:
+#     min_width gui.history_name_width
+#     textalign gui.history_name_xalign
+
+# style history_text:
+#     xpos gui.history_text_xpos
+#     ypos gui.history_text_ypos
+#     xanchor gui.history_text_xalign
+#     xsize gui.history_text_width
+#     min_width gui.history_text_width
+#     textalign gui.history_text_xalign
+#     layout ("subtitle" if gui.history_text_xalign else "tex")
+
+# style history_label:
+#     xfill True
+
+# style history_label_text:
+#     xalign 0.5
 
 
 ## Экран помощи ################################################################
