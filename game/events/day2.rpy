@@ -1,5 +1,6 @@
 label day2_start:
     play music "rain.mp3" loop
+    play sound "new_day.mp3" noloop
     $ current_day = 2
     scene bg kvist
     if clients["mikko"]["hangouts_day_1"]:

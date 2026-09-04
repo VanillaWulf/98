@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ################################################################################
 ## Стили
 ################################################################################
@@ -94,72 +93,345 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+# =========================================================
+# CITY N98 — DIALOGUE SCREEN
+# =========================================================
+
 screen say(who, what):
 
+    # =====================================================
+    # DIALOGUE WINDOW
+    # =====================================================
+
     window:
+
         id "window"
 
-        if who is not None:
+        xalign 0.5
+        yalign 1.0
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+        xsize 1480
+        ysize 230
 
-        text what id "what"
+        yoffset -20
 
+        background Fixed(
 
-    ## Если есть боковое изображение ("голова"), показывает её поверх текста.
-    ## По стандарту не показывается на варианте для мобильных устройств — мало
-    ## места.
-    if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+            # =================================================
+            # ТЁМНЫЙ ФОН
+            # =================================================
 
-
-## Делает namebox доступным для стилизации через объект Character.
-init python:
-    config.character_id_prefixes.append('namebox')
-
-style window is default
-style say_label is default
-style say_dialogue is default
-style say_thought is say_dialogue
-
-style namebox is default
-style namebox_label is say_label
+            Solid("#06151BCC"),
 
 
-style window:
-    xalign 0.5
-    xfill True
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
+            # =================================================
+            # ОСНОВНАЯ РАМКА — ПРИГЛУШЁННАЯ
+            # =================================================
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+            # Верхняя линия
 
-style namebox:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
+            Transform(
+                Solid("#00647D55"),
+                xpos=0,
+                ypos=0,
+                xsize=1480,
+                ysize=1
+            ),
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
+            # Нижняя линия
 
-style say_label:
-    properties gui.text_properties("name", accent=True)
-    xalign gui.name_xalign
-    yalign 0.5
+            Transform(
+                Solid("#00647D55"),
+                xpos=0,
+                ypos=229,
+                xsize=1480,
+                ysize=1
+            ),
+
+            # Левая линия
+
+            Transform(
+                Solid("#00647D55"),
+                xpos=0,
+                ypos=0,
+                xsize=1,
+                ysize=230
+            ),
+
+            # Правая линия
+
+            Transform(
+                Solid("#00647D55"),
+                xpos=1479,
+                ypos=0,
+                xsize=1,
+                ysize=230
+            ),
+
+
+            # =================================================
+            # ВЕРХНИЙ ЛЕВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=0,
+                xsize=18,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=0,
+                xsize=2,
+                ysize=18
+            ),
+
+
+            # =================================================
+            # ВЕРХНИЙ ПРАВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=1462,
+                ypos=0,
+                xsize=18,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=1478,
+                ypos=0,
+                xsize=2,
+                ysize=18
+            ),
+
+
+            # =================================================
+            # НИЖНИЙ ЛЕВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=228,
+                xsize=18,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=212,
+                xsize=2,
+                ysize=18
+            ),
+
+
+            # =================================================
+            # НИЖНИЙ ПРАВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=1462,
+                ypos=228,
+                xsize=18,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=1478,
+                ypos=212,
+                xsize=2,
+                ysize=18
+            )
+        )
+
+
+        # =====================================================
+        # ИМЯ ПЕРСОНАЖА
+        # =====================================================
+
+        if who:
+
+            text who:
+
+                id "who"
+
+                style "say_who"
+
+                xpos 55
+                ypos 28
+
+
+            # -------------------------------------------------
+            # ЛИНИЯ ПОД ИМЕНЕМ
+            # -------------------------------------------------
+
+            add Solid("#00B8ED"):
+
+                xpos 55
+                ypos 73
+
+                xsize 145
+                ysize 2
+
+
+        # =====================================================
+        # ТЕКСТ ДИАЛОГА
+        # =====================================================
+
+        text what:
+
+            id "what"
+
+            style "say_what"
+            color "#B7B9BB" 
+
+            xpos 55
+            ypos 95
+
+            xsize 1280
+
+            ymaximum 105
+
+
+# =========================================================
+# SPEAKER NAME
+# =========================================================
+
+style say_who:
+
+    font "fonts/DejaVuSans.ttf"
+
+    size 28
+
+    color "#B7B9BB"
+
+    bold False
+
+    xalign 0.0
+    yalign 0.0
+
+
+# =========================================================
+# DIALOGUE TEXT
+# =========================================================
+
+style say_what:
+
+    font "fonts/DejaVuSans.ttf"
+
+    size 27
+
+    color "#C5A35E"
+
+    xalign 0.0
+    yalign 0.0
+
+    text_align 0.0
+
+    line_spacing 4
+
+
+# =========================================================
+# HIDE DEFAULT REN'PY WINDOW STYLES
+# =========================================================
+
+style say_window:
+
+    background None
+
+    xfill False
+    yfill False
+
 
 style say_dialogue:
-    properties gui.text_properties("dialogue")
 
-    xpos gui.dialogue_xpos
-    xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
+    background None
 
-    adjust_spacing False
+
+# =========================================================
+# CHARACTER NAME POSITION
+# =========================================================
+
+style say_label:
+
+    xpos 55
+    ypos 28
+    
+# screen say(who, what):
+
+#     window:
+#         id "window"
+
+#         if who is not None:
+
+#             window:
+#                 id "namebox"
+#                 style "namebox"
+#                 text who id "who"
+
+#         text what id "what"
+
+
+#     ## Если есть боковое изображение ("голова"), показывает её поверх текста.
+#     ## По стандарту не показывается на варианте для мобильных устройств — мало
+#     ## места.
+#     if not renpy.variant("small"):
+#         add SideImage() xalign 0.0 yalign 1.0
+
+
+# ## Делает namebox доступным для стилизации через объект Character.
+# init python:
+#     config.character_id_prefixes.append('namebox')
+
+# style window is default
+# style say_label is default
+# style say_dialogue is default
+# style say_thought is say_dialogue
+
+# style namebox is default
+# style namebox_label is say_label
+
+
+# style window:
+#     xalign 0.5
+#     xfill True
+#     yalign gui.textbox_yalign
+#     ysize gui.textbox_height
+
+#     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+
+# style namebox:
+#     xpos gui.name_xpos
+#     xanchor gui.name_xalign
+#     xsize gui.namebox_width
+#     ypos gui.name_ypos
+#     ysize gui.namebox_height
+
+#     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+#     padding gui.namebox_borders.padding
+
+# style say_label:
+#     properties gui.text_properties("name", accent=True)
+#     xalign gui.name_xalign
+#     yalign 0.5
+
+# style say_dialogue:
+#     properties gui.text_properties("dialogue")
+
+#     xpos gui.dialogue_xpos
+#     xsize gui.dialogue_width
+#     ypos gui.dialogue_ypos
+
+#     adjust_spacing False
 
 ## Экран ввода #################################################################
 ##
@@ -204,31 +476,317 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+# =========================================================
+# CITY N98 — UNIVERSAL CHOICE MENU
+# =========================================================
+
+
+# =========================================================
+# CITY N98 — UNIVERSAL CHOICE MENU
+# =========================================================
+
 screen choice(items):
+
     style_prefix "choice"
 
     vbox:
+
         for i in items:
-            textbutton i.caption action i.action
+
+            textbutton i.caption:
+                action i.action
 
 
-style choice_vbox is vbox
-style choice_button is button
-style choice_button_text is button_text
+# =========================================================
+# CONTAINER
+# =========================================================
 
-style choice_vbox:
+style choice_vbox is vbox:
+
     xalign 0.5
     ypos 405
     yanchor 0.5
 
-    spacing gui.choice_spacing
+    spacing 16
 
-style choice_button is default:
-    properties gui.button_properties("choice_button")
 
-style choice_button_text is default:
-    properties gui.text_properties("choice_button")
+# =========================================================
+# BUTTON
+# =========================================================
 
+style choice_button is button:
+
+    # -----------------------------------------------------
+    # РАЗМЕР КНОПКИ
+    # -----------------------------------------------------
+
+    xsize 840
+    ysize 84
+
+    padding (28, 8)
+
+
+    # =====================================================
+    # ОБЫЧНОЕ СОСТОЯНИЕ
+    # =====================================================
+
+    background Fixed(
+
+        # -------------------------------------------------
+        # ТЁМНЫЙ ПРОЗРАЧНЫЙ ФОН
+        # -------------------------------------------------
+
+        Solid("#030b0fDD"),
+
+
+        # -------------------------------------------------
+        # ЛЕВАЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=0,
+            ypos=0,
+            xsize=2,
+            ysize=84
+        ),
+
+
+        # -------------------------------------------------
+        # ВЕРХНЯЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=2,
+            ypos=0,
+            xsize=836,
+            ysize=1
+        ),
+
+
+        # -------------------------------------------------
+        # НИЖНЯЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=2,
+            ypos=83,
+            xsize=836,
+            ysize=1
+        ),
+
+
+        # -------------------------------------------------
+        # ПРАВАЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=838,
+            ypos=0,
+            xsize=2,
+            ysize=84
+        )
+    )
+
+
+    # =====================================================
+    # HOVER
+    # =====================================================
+
+    hover_background Fixed(
+
+        # -------------------------------------------------
+        # ФОН
+        # -------------------------------------------------
+
+        Solid("#06151BEE"),
+
+
+        # -------------------------------------------------
+        # ЛЕВАЯ ЯРКАЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=0,
+            ypos=0,
+            xsize=3,
+            ysize=84
+        ),
+
+
+        # -------------------------------------------------
+        # ВЕРХНИЙ ЛЕВЫЙ УГОЛ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=0,
+            ypos=0,
+            xsize=11,
+            ysize=1
+        ),
+
+
+        # -------------------------------------------------
+        # НИЖНИЙ ЛЕВЫЙ УГОЛ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=0,
+            ypos=83,
+            xsize=11,
+            ysize=1
+        ),
+
+
+        # -------------------------------------------------
+        # ВЕРХНЯЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=3,
+            ypos=0,
+            xsize=825,
+            ysize=1
+        ),
+
+
+        # -------------------------------------------------
+        # НИЖНЯЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=3,
+            ypos=83,
+            xsize=825,
+            ysize=1
+        ),
+
+
+        # -------------------------------------------------
+        # ПРАВАЯ ЛИНИЯ
+        # -------------------------------------------------
+
+        Transform(
+            Solid("#00647d"),
+            xpos=838,
+            ypos=0,
+            xsize=2,
+            ysize=84
+        ),
+
+
+        # =================================================
+        # ВЕРХНИЙ ПРАВЫЙ УГОЛ
+        # =================================================
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=828,
+            ypos=0,
+            xsize=10,
+            ysize=1
+        ),
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=838,
+            ypos=0,
+            xsize=2,
+            ysize=10
+        ),
+
+
+        # =================================================
+        # НИЖНИЙ ПРАВЫЙ УГОЛ
+        # =================================================
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=828,
+            ypos=83,
+            xsize=10,
+            ysize=1
+        ),
+
+        Transform(
+            Solid("#00b8ed"),
+            xpos=838,
+            ypos=74,
+            xsize=2,
+            ysize=10
+        ),
+
+
+        # =================================================
+        # СТРЕЛКА
+        # =================================================
+
+        Transform(
+            Text(
+                "›",
+                font="fonts/DejaVuSans.ttf",
+                size=42,
+                color="#00b8ed"
+            ),
+            xpos=800,
+            ypos=42,
+            xanchor=0.5,
+            yanchor=0.5
+        )
+    )
+
+
+    # =====================================================
+    # ЗВУКИ
+    # =====================================================
+
+    hover_sound "audio/hover.mp3"
+    activate_sound "audio/menu_select.mp3"
+
+
+# =========================================================
+# BUTTON TEXT
+# =========================================================
+
+style choice_button_text is button_text:
+
+    font "fonts/DejaVuSans.ttf"
+
+    size 25
+
+    color "#b7b9bb"
+
+    hover_color "#00b8ed"
+
+    xalign 0.0
+    yalign 0.5
+
+    text_align 0.0
+
+
+# =========================================================
+# DISABLED CHOICE TEXT
+# =========================================================
+
+style choice_button_text_disabled is choice_button_text:
+
+    color "#596167"
+
+# =========================================================
+# ЗАПАСНЫЕ СТИЛИ REN'PY
+# =========================================================
+
+style choice_button is default
+
+style choice_vbox is vbox
 
 ## Экран быстрого меню #########################################################
 ##
@@ -243,78 +801,63 @@ screen quick_menu():
 
     zorder 100
 
+    key "game_menu" action ShowMenu("game_menu", title="Меню")
+
     if quick_menu:
 
         fixed:
 
-            # Тонкая линия сверху панели
-            add Solid("#00647D"):
-                xalign 0.5
-                yalign 1.0
-                xsize config.screen_width
-                ysize 1
+            # =====================================================
+            # ОБЩАЯ ПОЗИЦИЯ QUICK MENU
+            # =====================================================
 
-            # ============================================
-            # МЕНЮ — СПРАВА СНИЗУ
-            # ============================================
+            # -----------------------------------------------------
+            # ПРОПУСК — СЛЕВА
+            # -----------------------------------------------------
 
-            hbox:
-                xpos config.screen_width - 420
-                ypos config.screen_height - 52
+            button:
+                style "quick_button"
 
-                spacing 22
+                xpos 45
+                ypos config.screen_height - 40
 
-                # -----------------------------
-                # ПРОПУСК
-                # -----------------------------
+                action Skip()
+                alternate Skip(fast=True, confirm=True)
 
-                button:
-                    style "quick_button"
-
-                    action Skip()
-                    alternate Skip(fast=True, confirm=True)
-
-                    hbox:
-                        spacing 9
-                        yalign 0.5
-
-                        add "images/hud/skip.png":
-                            xsize 24
-                            ysize 24
-
-                        text _("ПРОПУСК"):
-                            style "quick_button_text"
-
-
-                # -----------------------------
-                # РАЗДЕЛИТЕЛЬ
-                # -----------------------------
-
-                add Solid("#00647D"):
-                    xsize 1
-                    ysize 22
+                hbox:
+                    spacing 9
                     yalign 0.5
 
+                    # add "images/hud/skip.png":
+                    #     xsize 24
+                    #     ysize 24
 
-                # -----------------------------
-                # ОПЦИИ
-                # -----------------------------
+                    text _("ПРОПУСК"):
+                        style "quick_button_text"
 
-                button:
-                    style "quick_button"
 
-                    action ShowMenu("game_menu", title="Меню")
+            # -----------------------------------------------------
+            # МЕНЮ — СПРАВА
+            # -----------------------------------------------------
 
-                    hbox:
-                        spacing 9
-                        yalign 0.5
+            button:
+                style "quick_button"
 
-                        add "images/hud/game_menu.png":
-                            xsize 24
-                            ysize 24
+                xpos config.screen_width - 150
+                ypos config.screen_height - 40
 
-                        text _("МЕНЮ"):
-                            style "quick_button_text"
+                action ShowMenu("game_menu", title="Меню")
+
+                hbox:
+                    spacing 9
+                    yalign 0.5
+
+                    # add "images/hud/game_menu.png":
+                    #     xsize 24
+                    #     ysize 24
+
+                    text _("МЕНЮ"):
+                        style "quick_button_text"
 ## Данный код гарантирует, что экран быстрого меню будет показан в игре в любое
 ## время, если только игрок не скроет интерфейс.
 init python:
@@ -364,12 +907,6 @@ style quick_menu:
     xalign 0.5
     yalign 1.0
 
-# style quick_button:
-#     properties gui.button_properties("quick_button")
-
-# style quick_button_text:
-#     properties gui.text_properties("quick_button")
-
 
 ################################################################################
 ## Экраны Главного и Игрового меню
@@ -379,63 +916,6 @@ style quick_menu:
 ##
 ## Этот экран включает в себя главное и игровое меню, и обеспечивает навигацию к
 ## другим меню и к началу игры.
-
-# screen navigation():
-
-#     vbox:
-#         style_prefix "navigation"
-
-#         xpos 70
-#         ypos 295
-
-#         spacing 15
-
-#         # ГЛАВНОЕ МЕНЮ
-#         if not main_menu:
-
-#             textbutton _("ГЛАВНОЕ МЕНЮ"):
-#                 style "main_menu_button"
-#                 action MainMenu()
-
-#         # НОВАЯ ИГРА
-#         textbutton _("НОВАЯ ИГРА"):
-#             style "main_menu_button"
-#             action Start()
-
-#         # НАСТРОЙКИ
-#         textbutton _("НАСТРОЙКИ"):
-#             style "main_menu_button"
-#             action ShowMenu("preferences")
-
-#         # ОБ ИГРЕ
-#         textbutton _("ОБ ИГРЕ"):
-#             style "main_menu_button"
-#             action ShowMenu("about")
-
-#         # ВЫХОД
-#         if renpy.variant("pc"):
-
-#             textbutton _("ВЫХОД"):
-#                 style "main_menu_button"
-#                 action Quit(confirm=True)
-
-
-# style navigation_button is gui_button
-# style navigation_button_text is gui_button_text
-
-# style navigation_button:
-#     size_group "navigation"
-#     properties gui.button_properties("navigation_button")
-
-# style navigation_button_text:
-#     properties gui.text_properties("navigation_button")
-
-
-## Экран главного меню #########################################################
-##
-## Используется, чтобы показать главное меню после запуска игры.
-##
-## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
     tag menu
@@ -482,13 +962,9 @@ screen main_menu():
             style "main_menu_button"
             action Start()
 
-        # textbutton "ЗАГРУЗИТЬ":
-        #     style "main_menu_button"
-        #     action ShowMenu("load")
-
         textbutton "НАСТРОЙКИ":
             style "main_menu_button"
-            action ShowMenu("preferences")
+            action ShowMenu("preferences")  
 
         textbutton "ОБ ИГРЕ":
             style "main_menu_button"
@@ -496,7 +972,7 @@ screen main_menu():
 
         textbutton "ВЫХОД":
             style "main_menu_button"
-            action Quit(confirm=True)
+            action Confirm(_("Вы уверены, что хотите выйти?"), Quit(confirm=False))
 
     # ==========================================
     # ВЕРСИЯ
@@ -520,7 +996,7 @@ screen main_menu():
 style menu_title:
     font "fonts/DejaVuSans.ttf"
     size 64
-    color "#c58a32"
+    color "#DFA45A"
     bold True
 
 style menu_subtitle:
@@ -538,7 +1014,7 @@ style main_menu_button:
     background None
 
     hover_sound "audio/hover.mp3"
-    activate_sound "audio/money_send.mp3"
+    activate_sound "audio/menu_select.mp3"
 
     hover_background Fixed(
         # =====================================================
@@ -705,76 +1181,10 @@ style main_menu_version:
 ## экран предназначен для использования с одним или несколькими дочерними
 ## элементами, которые трансклюдируются (помещаются) внутрь него.
 
-# screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-
-#     style_prefix "game_menu"
-
-#     if main_menu:
-#         add gui.main_menu_background
-#     else:
-#         add gui.game_menu_background
-
-#     frame:
-#         style "game_menu_outer_frame"
-
-#         hbox:
-
-#             ## Резервирует пространство для навигации.
-#             frame:
-#                 style "game_menu_navigation_frame"
-
-#             frame:
-#                 style "game_menu_content_frame"
-
-#                 if scroll == "viewport":
-
-#                     viewport:
-#                         yinitial yinitial
-#                         scrollbars "vertical"
-#                         mousewheel True
-#                         draggable True
-#                         pagekeys True
-
-#                         side_yfill True
-
-#                         vbox:
-#                             spacing spacing
-
-#                             transclude
-
-#                 elif scroll == "vpgrid":
-
-#                     vpgrid:
-#                         cols 1
-#                         yinitial yinitial
-
-#                         scrollbars "vertical"
-#                         mousewheel True
-#                         draggable True
-#                         pagekeys True
-
-#                         side_yfill True
-
-#                         spacing spacing
-
-#                         transclude
-
-#                 else:
-
-#                     transclude
-
-#     use navigation
-
-#     textbutton _("Вернуться"):
-#         style "return_button"
-
-#         action Return()
-
-#     label title
-
-#     if main_menu:
-#         key "game_menu" action ShowMenu("main_menu")
-
+init python:
+    class MyMainMenu(Action):
+        def __call__(self):
+            renpy.full_restart()
 
 ## =========================================================
 ## ИГРОВОЕ МЕНЮ — ESC
@@ -814,14 +1224,17 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
         spacing 15
 
         # ГЛАВНОЕ МЕНЮ
-        textbutton "ГЛАВНОЕ МЕНЮ":
+        textbutton _("ГЛАВНОЕ МЕНЮ"):
             style "main_menu_button"
-            action MainMenu()
+            action Confirm(
+                _("Вы уверены, что хотите вернуться в\n главное меню? Весь прогресс\n будет потерян."),
+                MyMainMenu()
+            )
 
         # НОВАЯ ИГРА
         textbutton "НОВАЯ ИГРА":
             style "main_menu_button"
-            action Start()
+            action Confirm(_("Начать новую игру?"),Start())
 
         # НАСТРОЙКИ
         textbutton "НАСТРОЙКИ":
@@ -846,7 +1259,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
         # ВЫХОД
         textbutton "ВЫХОД":
             style "main_menu_button"
-            action Quit(confirm=True)
+            action Confirm(_("Вы уверены, что хотите выйти?"), Quit(confirm=False))
 
     # =====================================================
     # ВЕРСИЯ
@@ -1416,7 +1829,7 @@ style settings_option:
     padding (0, 0)
 
     hover_sound "audio/hover.mp3"
-    activate_sound "audio/money_send.mp3"
+    activate_sound "audio/menu_select.mp3"
 
 style settings_option_text:
     font "fonts/DejaVuSans.ttf"
@@ -1511,44 +1924,6 @@ style slider_vbox:
 ##
 ## https://www.renpy.org/doc/html/history.html
 
-# screen history():
-
-#     tag menu
-
-#     ## Избегайте предсказывания этого экрана, так как он может быть очень
-#     ## массивным.
-#     predict False
-
-#     use game_menu(_("История"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0, spacing=gui.history_spacing):
-
-#         style_prefix "history"
-
-#         for h in _history_list:
-
-#             window:
-
-#                 ## Это всё правильно уравняет, если history_height будет
-#                 ## установлен на None.
-#                 has fixed:
-#                     yfit True
-
-#                 if h.who:
-
-#                     label h.who:
-#                         style "history_name"
-#                         substitute False
-
-#                         ## Берёт цвет из who параметра персонажа, если он
-#                         ## установлен.
-#                         if "color" in h.who_args:
-#                             text_color h.who_args["color"]
-
-#                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-#                 text what:
-#                     substitute False
-
-#         if not _history_list:
-#             label _("История диалогов пуста.")
 
 
 # =========================================================
@@ -1674,6 +2049,7 @@ screen history():
         ypos 865
 
         action Return()
+
 
 # =========================================================
 # СТИЛИ ИСТОРИИ
@@ -2391,3 +2767,328 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+# ============================================================
+# ТРАНСФОРМАЦИЯ ДЛЯ ПРОКРУТКИ ТИТРОВ
+# ============================================================
+
+transform credits_viewport_scroll:
+    yoffset 900                    # начальное смещение (титры начинаются снизу)
+    linear 50.0 yoffset -1500      # финальное смещение (титры уходят вверх)
+
+
+# ============================================================
+# CITY N98 — END CREDITS
+# ============================================================
+
+screen city98_credits():
+
+    modal True
+    zorder 1000
+    on "show" action Play("music", "audio/menu.mp3")
+    on "hide" action Stop("music")
+
+
+    # Фон
+    add "images/city.png":
+        xsize 1920
+        ysize 1080
+
+    add Solid("#06151B"):
+        alpha 0.78
+
+
+    # =========================================================
+    # ПРОКРУЧИВАЕМЫЕ ТИТРЫ
+    # =========================================================
+
+    viewport at credits_viewport_scroll:
+        xpos 420
+        ypos 165
+        xsize 1080
+        ysize 1500
+        mousewheel False
+        draggable False
+        scrollbars None
+
+        vbox:
+            xsize 1080
+            xalign 0.5
+            spacing 35
+
+            # -------------------------------------------------
+            # ЗАГОЛОВОК
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 8
+
+                text "CITY N98":
+                    xalign 0.5
+                    style "menu_title"
+
+                text "N98-7F / FINAL SYSTEM LOG":
+                    xalign 0.5
+                    style "menu_subtitle"
+
+            null height 35
+
+            # -------------------------------------------------
+            # РАЗРАБОТКА
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "РАЗРАБОТКА":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # СЦЕНАРИЙ
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "СЦЕНАРИЙ":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # ДИЗАЙН ИНТЕРФЕЙСА
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "ДИЗАЙН ИНТЕРФЕЙСА":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # ГРАФИКА
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "ГРАФИКА":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+                # text "Микко":
+                #     xalign 0.5
+                #     color "#B7B9BB"
+                #     size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # МУЗЫКА И ЗВУК
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "МУЗЫКА И ЗВУК":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # ПЕРЕВОД
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "ПЕРЕВОД НА АНГЛИЙСКИЙ":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # ТЕСТИРОВАНИЕ
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 5
+
+                text "ТЕСТИРОВАНИЕ":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Anarsve":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 23
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # ОСОБАЯ БЛАГОДАРНОСТЬ
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 8
+
+                text "ОСОБАЯ БЛАГОДАРНОСТЬ":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 24
+
+                text "Всем, кто верил в проект":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 21
+
+                text "и поддерживал нас на этом пути":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 21
+
+            add Solid("#063542"):
+                xsize 420
+                ysize 1
+                xalign 0.5
+
+            # -------------------------------------------------
+            # ФИНАЛ
+            # -------------------------------------------------
+            vbox:
+                xalign 0.5
+                spacing 10
+
+                text "СПАСИБО ЗА ИГРУ":
+                    xalign 0.5
+                    color "#00B8ED"
+                    size 27
+
+                text "Город живёт только благодаря тем,":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 21
+
+                text "кто возвращается в него снова.":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 21
+
+                null height 25
+
+                text "Каждое решение влияет на судьбу персонажей.":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 21
+
+                text "Переиграйте игру — и история может закончиться иначе.":
+                    xalign 0.5
+                    color "#B7B9BB"
+                    size 21
+
+                null height 25
+
+                text "УВИДИМСЯ в Cтаром Центре.":
+                    xalign 0.5
+                    color "#C58A32"
+                    size 20
+
+                null height 300
+
+    # =========================================================
+    # КНОПКИ ВНИЗУ
+    # =========================================================
+
+    button:
+        style "quick_button"
+        xpos 45
+        ypos config.screen_height - 40
+        action [Hide("city98_credits"), Function(renpy.full_restart, label="start")]
+
+        hbox:
+            spacing 9
+            yalign 0.5
+
+            text _("НОВАЯ ИГРА"):
+                style "quick_button_text"
+
+    button:
+        style "quick_button"
+        xpos config.screen_width - 150
+        ypos config.screen_height - 40
+        action [Hide("city98_credits"), MainMenu(confirm=False)]
+
+        hbox:
+            spacing 9
+            yalign 0.5
+
+            text _("МЕНЮ"):
+                style "quick_button_text"
+                

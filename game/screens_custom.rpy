@@ -6,8 +6,9 @@ screen game_hud():
 
     zorder 100
 
+
     # =========================================================
-    # ОСНОВНОЙ HUD
+    # ВЕРХНИЙ ТРЕЙ
     # =========================================================
 
     fixed:
@@ -15,21 +16,24 @@ screen game_hud():
         xalign 0.00
         yalign 0.00
 
-        xsize 830
-        ysize 125
+        yoffset 12
+        xoffset 12
+        
+        xsize 720
+        ysize 100
 
 
         # =====================================================
-        # ФОН
+        # ФОН ТРЕЯ
         # =====================================================
 
-        add Solid("#050608C8"):
+        add Solid("#06151BB8"):
 
             xpos 0
             ypos 0
 
-            xsize 830
-            ysize 125
+            xsize 720
+            ysize 100
 
 
         # =====================================================
@@ -39,10 +43,10 @@ screen game_hud():
         hbox:
 
             xpos 10
-            ypos 10
+            ypos 5
 
-            xsize 830
-            ysize 125
+            xsize 710
+            ysize 95
 
             spacing 0
 
@@ -53,8 +57,8 @@ screen game_hud():
 
             fixed:
 
-                xsize 75
-                ysize 135
+                xsize 85
+                ysize 95
 
 
                 text _("ДЕНЬ"):
@@ -62,34 +66,34 @@ screen game_hud():
                     xpos 8
                     ypos 0
 
-                    size 20
+                    size 18
                     bold True
 
-                    color "#9EA4A7"
+                    color "#899196"
 
 
                 hbox:
 
                     xpos 8
-                    ypos 47
+                    ypos 39
 
                     spacing 5
 
 
                     add "images/hud/icon_day.png":
 
-                        xsize 29
-                        ysize 29
+                        xsize 26
+                        ysize 26
 
                         yalign 0.5
 
 
                     text "[current_day]":
 
-                        size 35
+                        size 29
                         bold True
 
-                        color "#D4D6D7"
+                        color "#B7B9BB"
 
                         yalign 0.5
 
@@ -101,9 +105,9 @@ screen game_hud():
             frame:
 
                 xsize 1
-                ysize 100
+                ysize 82
 
-                background "#AEB4B722"
+                background "#00647D55"
 
                 yalign 0.05
 
@@ -114,43 +118,43 @@ screen game_hud():
 
             fixed:
 
-                xsize 125
-                ysize 135
+                xsize 120
+                ysize 95
 
 
                 text _("КРЕДИТЫ"):
 
-                    xpos 5
+                    xpos 8
                     ypos 0
 
-                    size 20
+                    size 18
                     bold True
 
-                    color "#9EA4A7"
+                    color "#899196"
 
 
                 hbox:
 
-                    xpos 5
-                    ypos 47
+                    xpos 8
+                    ypos 39
 
                     spacing 5
 
 
                     add "images/hud/icon_money.png":
 
-                        xsize 32
-                        ysize 32
+                        xsize 28
+                        ysize 28
 
                         yalign 0.5
 
 
                     text "[money]":
 
-                        size 35
+                        size 29
                         bold True
 
-                        color "#D4D6D7"
+                        color "#B7B9BB"
 
                         yalign 0.5
 
@@ -162,9 +166,9 @@ screen game_hud():
             frame:
 
                 xsize 1
-                ysize 100
+                ysize 82
 
-                background "#AEB4B722"
+                background "#00647D55"
 
                 yalign 0.05
 
@@ -175,43 +179,43 @@ screen game_hud():
 
             fixed:
 
-                xsize 125
-                ysize 135
+                xsize 120
+                ysize 95
 
 
                 text _("ДЕЙСТВИЯ"):
 
-                    xpos 5
+                    xpos 8
                     ypos 0
 
-                    size 20
+                    size 18
                     bold True
 
-                    color "#9EA4A7"
+                    color "#899196"
 
 
                 hbox:
 
-                    xpos 5
-                    ypos 47
+                    xpos 8
+                    ypos 39
 
                     spacing 5
 
 
                     add "images/hud/icon_actions.png":
 
-                        xsize 32
-                        ysize 32
+                        xsize 28
+                        ysize 28
 
                         yalign 0.5
 
 
                     text "[actions]":
 
-                        size 35
+                        size 29
                         bold True
 
-                        color "#D4D6D7"
+                        color "#B7B9BB"
 
                         yalign 0.5
 
@@ -223,9 +227,9 @@ screen game_hud():
             frame:
 
                 xsize 1
-                ysize 100
+                ysize 82
 
-                background "#AEB4B722"
+                background "#00647D55"
 
                 yalign 0.05
 
@@ -236,19 +240,19 @@ screen game_hud():
 
             fixed:
 
-                xsize 295
-                ysize 135
+                xsize 270
+                ysize 95
 
 
                 text _("ЗАПАСЫ"):
 
-                    xpos 5
+                    xpos 8
                     ypos 0
 
-                    size 20
+                    size 18
                     bold True
 
-                    color "#9EA4A7"
+                    color "#899196"
 
 
                 # =================================================
@@ -257,11 +261,11 @@ screen game_hud():
 
                 fixed:
 
-                    xpos 5
-                    ypos 25
+                    xpos 8
+                    ypos 23
 
-                    xsize 50
-                    ysize 80
+                    xsize 105
+                    ysize 70
 
 
                     text _("ПРОВОДА"):
@@ -269,34 +273,34 @@ screen game_hud():
                         xpos 0
                         ypos 0
 
-                        size 14
+                        size 13
                         bold True
 
-                        color "#9EA4A7"
+                        color "#899196"
 
 
                     hbox:
 
                         xpos 0
-                        ypos 25
+                        ypos 22
 
                         spacing 4
 
 
                         add "images/hud/icon_wires.png":
 
-                            xsize 28
-                            ysize 28
+                            xsize 25
+                            ysize 25
 
                             yalign 0.5
 
 
                         text "[wires]":
 
-                            size 31
+                            size 28
                             bold True
 
-                            color "#D4D6D7"
+                            color "#B7B9BB"
 
                             yalign 0.5
 
@@ -307,13 +311,13 @@ screen game_hud():
 
                 frame:
 
-                    xpos 130
-                    ypos 25
+                    xpos 120
+                    ypos 27
 
                     xsize 1
-                    ysize 60
+                    ysize 50
 
-                    background "#AEB4B722"
+                    background "#00647D55"
 
 
                 # =================================================
@@ -322,11 +326,11 @@ screen game_hud():
 
                 fixed:
 
-                    xpos 155
-                    ypos 25
+                    xpos 140
+                    ypos 23
 
-                    xsize 180
-                    ysize 80
+                    xsize 120
+                    ysize 70
 
 
                     text _("МИКРОСХЕМЫ"):
@@ -334,95 +338,113 @@ screen game_hud():
                         xpos 0
                         ypos 0
 
-                        size 14
+                        size 13
                         bold True
 
-                        color "#9EA4A7"
+                        color "#899196"
 
 
                     hbox:
 
                         xpos 0
-                        ypos 25
+                        ypos 22
 
                         spacing 4
 
 
                         add "images/hud/icon_chips.png":
 
-                            xsize 28
-                            ysize 28
+                            xsize 25
+                            ysize 25
 
                             yalign 0.5
 
 
                         text "[chips]":
 
-                            size 31
+                            size 28
                             bold True
 
-                            color "#D4D6D7"
+                            color "#B7B9BB"
 
                             yalign 0.5
+
+
     # ============================================================
     # ПРАВАЯ ПАНЕЛЬ — АКТИВНЫЕ ЗАКАЗЫ
     # ============================================================
 
     fixed:
 
-        xalign 0.965
-        yalign 0
+        xalign 0.99
+        yalign 0.00
+
+        yoffset 12
+
 
         xsize 350
-        ysize 440
+        ysize 420
 
 
-        # --------------------------------------------------------
-        # ФОН
-        # --------------------------------------------------------
+        # =====================================================
+        # ЛЁГКИЙ ФОН
+        # =====================================================
 
-        add Solid("#050608C0"):
+        add Solid("#06151BB8"):
 
-            xsize 500
-            ysize 440
+            xpos 0
+            ypos 0
+
+            xsize 350
+            ysize 420
 
 
-        # --------------------------------------------------------
+        # =====================================================
         # КОНТЕНТ
-        # --------------------------------------------------------
+        # =====================================================
 
         vbox:
 
-            xpos 15
-            ypos 15
+            xpos 20
+            ypos 18
 
-            xsize 400
+            xsize 310
 
-            spacing 20
+            spacing 16
 
 
-            # ====================================================
+            # =================================================
             # ЗАГОЛОВОК
-            # ====================================================
+            # =================================================
 
             text _("АКТИВНЫЕ ЗАКАЗЫ"):
 
-                size 27
+                size 25
                 bold True
-                color "#9EA4A7"
 
-                outlines [
-                    (1, "#00000090", 0, 1)
-                ]
+                color "#899196"
 
 
-            # ====================================================
+            # =================================================
+            # ЛИНИЯ ПОД ЗАГОЛОВКОМ
+            # =================================================
+
+            frame:
+
+                xsize 300
+                ysize 1
+
+                background "#00647D80"
+
+
+            # =================================================
             # СПИСОК ЗАКАЗОВ
-            # ====================================================
+            # =================================================
 
             vbox:
 
-                xsize 452
+                xsize 310
+
                 spacing 0
 
 
@@ -430,15 +452,26 @@ screen game_hud():
 
                     if client.get("order_active", False):
 
+
+                        # =========================================
+                        # СТАТУС ЗАКАЗА
+                        # =========================================
+
                         $ completed = client.get(
                             "order_completed",
                             False
                         )
 
+
+                        # =========================================
+                        # ПЕРЕВОД
+                        # =========================================
+
                         $ client_name = tr(
                             key,
                             "name"
                         )
+
 
                         $ order_name = tr(
                             key,
@@ -446,65 +479,319 @@ screen game_hud():
                         )
 
 
-                        # =================================================
+                        # =========================================
                         # ОДИН ЗАКАЗ
-                        # =================================================
+                        # =========================================
 
                         vbox:
 
-                            xsize 452
+                            xsize 310
 
-                            spacing 8
+                            spacing 5
 
 
-                            # ---------------------------------------------
+                            # =====================================
                             # ИМЯ КЛИЕНТА
-                            # ---------------------------------------------
+                            # =====================================
 
                             if completed:
+
                                 text "[client_name]":
 
-                                    size 24
+                                    size 22
                                     bold True
 
-                                    color "#88B38A"
+                                    color "#899196"
 
                             else:
 
                                 text "[client_name]":
 
-                                    size 24
+                                    size 22
                                     bold True
 
                                     color "#C5A35E"
 
 
-                            # ---------------------------------------------
+                            # =====================================
                             # НАЗВАНИЕ ЗАКАЗА
-                            # ---------------------------------------------
+                            # =====================================
 
                             text "[order_name]":
 
-                                size 18
+                                size 17
 
-                                color "#A2A8AA"
-                        
-                            # ---------------------------------------------
+                                color "#899196"
+
+
+                            # =====================================
                             # РАЗДЕЛИТЕЛЬ
-                            # ---------------------------------------------
+                            # =====================================
 
                             frame:
 
-                                xsize 370
+                                xsize 300
                                 ysize 1
 
                                 if completed:
 
-                                    background "#789F7A45"
+                                    background "#00647D35"
 
                                 else:
 
-                                    background "#AEB4B722"
+                                    background "#00647D55"
 
 
-                            null height 14
+                            # =====================================
+                            # ОТСТУП
+                            # =====================================
+
+                            null:
+
+                                height 13
+
+# ============================================================
+# CITY N98 — UNIVERSAL CONFIRM WINDOW
+# ============================================================
+
+screen confirm(message, yes_action, no_action):
+
+    modal True
+
+    zorder 200
+
+
+    # ========================================================
+    # ЗАТЕМНЕНИЕ ФОНА
+    # ========================================================
+
+    add Solid("#06151BAA")
+
+
+    # ========================================================
+    # ОКНО ПОДТВЕРЖДЕНИЯ
+    # ========================================================
+
+    frame:
+
+        xalign 0.5
+        yalign 0.5
+
+        xsize 620
+        ysize 250
+
+        padding (0, 0)
+
+        background Fixed(
+
+            # =================================================
+            # ФОН
+            # =================================================
+
+            Solid("#06151BF2"),
+
+
+            # =================================================
+            # ОСНОВНАЯ РАМКА
+            # =================================================
+
+            Transform(
+                Solid("#00647D55"),
+                xpos=0,
+                ypos=0,
+                xsize=620,
+                ysize=1
+            ),
+
+            Transform(
+                Solid("#00647D55"),
+                xpos=0,
+                ypos=249,
+                xsize=620,
+                ysize=1
+            ),
+
+            Transform(
+                Solid("#00647D55"),
+                xpos=0,
+                ypos=0,
+                xsize=1,
+                ysize=250
+            ),
+
+            Transform(
+                Solid("#00647D55"),
+                xpos=619,
+                ypos=0,
+                xsize=1,
+                ysize=250
+            ),
+
+
+            # =================================================
+            # ВЕРХНИЙ ЛЕВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=0,
+                xsize=27,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=0,
+                xsize=2,
+                ysize=27
+            ),
+
+
+            # =================================================
+            # ВЕРХНИЙ ПРАВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=593,
+                ypos=0,
+                xsize=27,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=618,
+                ypos=0,
+                xsize=2,
+                ysize=27
+            ),
+
+
+            # =================================================
+            # НИЖНИЙ ЛЕВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=248,
+                xsize=27,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=0,
+                ypos=223,
+                xsize=2,
+                ysize=27
+            ),
+
+
+            # =================================================
+            # НИЖНИЙ ПРАВЫЙ УГОЛ
+            # =================================================
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=593,
+                ypos=248,
+                xsize=27,
+                ysize=2
+            ),
+
+            Transform(
+                Solid("#00B8ED"),
+                xpos=618,
+                ypos=223,
+                xsize=2,
+                ysize=27
+            )
+        )
+
+
+        # ====================================================
+        # СОДЕРЖИМОЕ
+        # ====================================================
+
+        fixed:
+
+            xsize 620
+            ysize 250
+
+
+            # =================================================
+            # СООБЩЕНИЕ
+            # =================================================
+
+            text message:
+                xalign 0.5
+                ypos 60
+                size 25
+                color "#B7B9BB"
+                text_align 0.5   # оставьте для надёжности
+
+
+            # =================================================
+            # КНОПКА ДА
+            # =================================================
+
+            textbutton _("ДА"):
+
+                xpos 45
+                ypos 160
+
+                xsize 200
+                ysize 65
+
+                text_style "confirm_button_text"
+
+                background Solid("#06151B80")
+
+                hover_background Solid("#06151BCC")
+
+                action yes_action
+
+
+            # =================================================
+            # КНОПКА НЕТ
+            # =================================================
+
+            textbutton _("НЕТ"):
+
+                xpos 375
+                ypos 160
+
+                xsize 200
+                ysize 65
+
+                text_style "confirm_button_text"
+
+                background Solid("#06151B80")
+
+                hover_background Solid("#06151BCC")
+
+                action no_action
+
+
+# ============================================================
+# TEXT STYLE — CONFIRM BUTTONS
+# ============================================================
+
+style confirm_button_text:
+
+    font "fonts/DejaVuSans.ttf"
+
+    size 23
+
+    color "#B7B9BB"
+
+    hover_color "#00B8ED"
+
+    xalign 0.5
+    yalign 0.5
+
+    text_align 0.5

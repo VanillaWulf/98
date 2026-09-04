@@ -218,6 +218,7 @@ label day3_call_becker:
         # Случай: заказ активен и не выполнен
         elif clients["bekker"]["order_active"] and not clients["bekker"]["order_completed"]:
             b "Ты чего звонишь, если модуль не готов? Я ушел по делам... Возможно, встречу Пола по дороге"
+            b "Он только корчит из себя приличного, но лишними деньгами не побрезгует."
             $ clients["bekker"]["banned"] = True
             jump phone_menu
       

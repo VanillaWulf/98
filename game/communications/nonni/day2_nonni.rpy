@@ -134,7 +134,7 @@ label day2_call_nonni:
                     $ clients["andrea"]["cure_price"] -= 9
                     $ money += 15
                     play sound "money.mp3" noloop
-                    "Вам зачислили 20 кредитов"
+                    "Вам зачислили 15 кредитов"
                     n "Этот звонок мне нравится больше, чем предыдущий! Хотя и медленней, чем я думала. Мне пора"
                     $ clients["nonni"]["banned"] = True
                 "Готов, 20":

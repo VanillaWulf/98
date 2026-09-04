@@ -1,5 +1,6 @@
 label day5_start:
    # --- Утро ---
+    $ current_day = 5
     "Пятый день."
 
     scene bg call_nonni_sad
@@ -150,3 +151,8 @@ if (
     "Впервые за долгое время у семьи Квиста появляется надежда."
 else:
     "Город N98 продолжает жить дальше."
+
+hide screen quick_menu
+hide screen game_hud
+
+call screen city98_credits

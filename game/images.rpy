@@ -27,7 +27,6 @@ image bg call_andrea_run:
     "call_andrea_run.png"
     fit "cover"
     
-
 image bg linchi:
     "linchi.png"
     fit "cover"
@@ -132,4 +131,34 @@ image bg micko_good:
     "micko_good.png"
     fit "cover"
 
+image bg micko1_1:
+    "micko1_1.png"
+    fit "cover"
+
+image bg micko1_2:
+    "micko1_2.png"
+    fit "cover"
+
+image bg micko1_3:
+    "micko1_3.png"
+    fit "cover"
+
+image bg micko2_1:
+    "micko2_1.png"
+    fit "cover"
+
+image bg micko2_2:
+    "micko2_2.png"
+    fit "cover"
+
+image bg micko2_3:
+    "micko2_3.png"
+    fit "cover"
     
+image bg city_credits:
+    "city_credits.png"
+    fit "cover"
+
+image bg andrea_pick:
+    "andrea_pick.png"
+    fit "cover"

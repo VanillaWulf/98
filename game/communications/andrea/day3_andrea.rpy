@@ -10,7 +10,12 @@ label day3_call_andrea:
 label day3_andrea_takeaway:
     if actions == 2:
         $ clients["andrea"]["takeaway"] = True
-        k "Ты забрал Андреу."
+        scene bg andrea_pick
+        "Квист забрал Андреу. Она еле держалась на ногахю"
+        k "Потерпи, тут недолеко до Нонни"
+        a "..."
+        scene nonni_place
+        "Всю ночь Квист провел в больнице - то он злился на себя, то вспоминал, как молиться."
         jump day4_start
     else:
         k "Меня едва хватит дойти до Даров Моря, может, кто-то согласится помочь."

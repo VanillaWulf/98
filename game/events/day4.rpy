@@ -1,5 +1,5 @@
 label day4_start:
-
+    play sound "new_day.mp3" noloop
     play music "rain.mp3" loop
 
     $ current_day = 4

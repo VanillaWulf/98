@@ -15,10 +15,10 @@ label day2_call_becker:
 
     # --- Заказ деталей (только при первом звонке) ---
     if clients["bekker"]["called"] == 1:
-        b "Квист, слушай. Завтра у меня будет поставка. Могу привезти детали. Провод или микросхема – по [clients['bekker']['base_price']]$ или оба. Что закажешь?"
+        b "Квист, слушай. Завтра у меня будет поставка. Могу привезти детали. Провод или микросхема – по [clients['bekker']['base_price']]$ или оба по [clients['bekker']['base_price'] * 2]$. Что закажешь?"
         menu:
             extend ""
-            "Заказать провод ([clients['bekker']['base_price']])":
+            "Заказать провод ([clients['bekker']['base_price']]$)":
                 if money >= clients["bekker"]["base_price"]:
                     $ money -= clients["bekker"]["base_price"]
                     play sound "money_send.mp3" noloop
@@ -30,7 +30,7 @@ label day2_call_becker:
                     $ clients["bekker"]["banned"] = True
                     k "Ладно, завтра уже отойдет"
                     jump phone_menu
-            "Заказать микросхему ([clients['bekker']['base_price']])":
+            "Заказать микросхему ([clients['bekker']['base_price']]$)":
                 if money >= clients["bekker"]["base_price"]:
                     $ money -= clients["bekker"]["base_price"]
                     play sound "money_send.mp3" noloop
@@ -42,7 +42,7 @@ label day2_call_becker:
                     $ clients["bekker"]["banned"] = True
                     k "Ладно, завтра уже отойдет"
                     jump phone_menu
-            "Заказать оба ([clients['bekker']['base_price']]) * 2":
+            "Заказать оба ([clients['bekker']['base_price'] * 2]$)":
                 if money >= clients["bekker"]["base_price"] * 2:
                     $ money -= clients["bekker"]["base_price"] * 2
                     $ clients["bekker"]["ordered_part"] = "both"

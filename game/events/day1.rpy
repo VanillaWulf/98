@@ -48,7 +48,7 @@ label day1_intro:
 
 label day1_andrea_call:
     play sound "call.mp3" noloop
-    scene bg call_andrea_run
+    scene bg call_andrea
     a "Привет, па. Еду от Даров Моря."
     k "Как погода?"
     a "Ты шутишь? Дерьмо, как обычно! И моноколесо опять скрипит - достало!"

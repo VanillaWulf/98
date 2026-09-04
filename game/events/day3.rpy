@@ -1,4 +1,5 @@
 label day3_start:
+    play sound "new_day.mp3" noloop
     $ current_day = 3
     scene bg kvist
 
@@ -44,7 +45,7 @@ label day3_linh_visit:
     if clients["mikko"]["hangouts_day_2"]:            
         l "Несколько месяцев планировали 7 минут, есть чему поучиться."
     else:
-        "Ну ладно, там все равно их поймали потом"
+        l "Ну ладно, там все равно их поймали потом"
 
     # Ситуации с заказом Линь Чи
     if clients["linh"]["order_active"] and clients["linh"]["order_completed"]:
