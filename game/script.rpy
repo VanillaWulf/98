@@ -8,14 +8,14 @@
     $ wires = vars["wires"]
     $ chips = vars["chips"]
 
-    menu:
-        "Выберите языка"
+    # menu:
+    #     "Выберите языка"
 
-        "Русский":
-            $ renpy.change_language(None)
+    #     "Русский":
+    #         $ renpy.change_language(None)
 
-        "English":
-            $ renpy.change_language("english")
+    #     "English":
+    #         $ renpy.change_language("english")
 
     jump day1_intro
 

@@ -154,7 +154,39 @@ image bg micko2_2:
 image bg micko2_3:
     "micko2_3.png"
     fit "cover"
+
+image bg micko2_4:
+    "micko2_4.png"
+    fit "cover"    
     
+image bg micko3_1:
+    "micko3_1.png"
+    fit "cover"   
+
+image bg micko3_2:
+    "micko3_2.png"
+    fit "cover"   
+
+image bg micko3_3:
+    "micko3_3.png"
+    fit "cover"   
+
+image bg micko3_4:
+    "micko3_4.png"
+    fit "cover"        
+
+image bg micko4_1:
+    "micko4_1.png"
+    fit "cover"   
+
+image bg micko4_2:
+    "micko4_2.png"
+    fit "cover"  
+
+image bg micko4_3:
+    "micko4_3.png"
+    fit "cover"            
+
 image bg city_credits:
     "city_credits.png"
     fit "cover"

@@ -1409,7 +1409,7 @@ screen about():
     textbutton "НАЗАД":
         style "main_menu_button"
         xpos 70
-        ypos 880
+        ypos 900
         action Return()
 
 
@@ -1770,6 +1770,29 @@ screen preferences():
         xsize 400
         ysize 12
         style "settings_slider"
+    
+    # -----------------------------------------------------
+    # язык
+    # -----------------------------------------------------
+    
+    text "ЯЗЫК":
+        xpos 70
+        ypos 755  # подстройте координаты под ваше меню
+        style "settings_label"
+
+    textbutton "РУССКИЙ":
+        xpos 70
+        ypos 795
+        style "settings_option"
+        action Function(renpy.change_language, None)
+        selected (preferences.language == None)
+
+    textbutton "ENGLISH":
+        xpos 300
+        ypos 795
+        style "settings_option"
+        action Function(renpy.change_language, "english")
+        selected (preferences.language == "english")
 
 
     # -----------------------------------------------------
@@ -1781,19 +1804,19 @@ screen preferences():
         ypos 645
         style "settings_label"
 
-
     textbutton "ОКОННЫЙ":
         xpos 70
         ypos 685
         style "settings_option"
         action Preference("display", "window")
-
+        selected (not _preferences.fullscreen) 
 
     textbutton "ПОЛНЫЙ":
         xpos 300
         ypos 685
         style "settings_option"
         action Preference("display", "fullscreen")
+        selected (_preferences.fullscreen)
 
     # =====================================================
     # НАЗАД
@@ -1801,7 +1824,7 @@ screen preferences():
 
     textbutton "НАЗАД":
         xpos 70
-        ypos 850
+        ypos 900
         style "main_menu_button"
         action Return()
 # =========================================================
@@ -1836,7 +1859,7 @@ style settings_option_text:
     size 26
     color "#b7b9bb"
     hover_color "#00b8ed"
-
+    selected_color "#00b8ed"
 
 
 style settings_slider is slider:
@@ -2046,7 +2069,7 @@ screen history():
         style "main_menu_button"
 
         xpos 70
-        ypos 865
+        ypos 900
 
         action Return()
 
@@ -3092,3 +3115,20 @@ screen city98_credits():
             text _("МЕНЮ"):
                 style "quick_button_text"
                 
+
+label splashscreen:
+    if not persistent.language_chosen:
+        menu:
+            "Выберите язык"
+
+            "Русский":
+                $ renpy.change_language(None)
+                $ persistent.language_chosen = True
+
+            "English":
+                $ renpy.change_language("english")
+                $ persistent.language_chosen = True
+
+        # После выбора просто возвращаемся (это завершит splashscreen)
+        return
+    return
