@@ -814,28 +814,31 @@ screen quick_menu():
             # -----------------------------------------------------
             # ПРОПУСК — СЛЕВА
             # -----------------------------------------------------
+            
 
-            button:
-                style "quick_button"
-
+            hbox:
                 xpos 45
-                ypos config.screen_height - 40
+                ypos config.screen_height - 50
+                spacing 9
 
-                action Skip()
-                alternate Skip(fast=True, confirm=True)
+                # Кнопка пропуска
+                imagebutton:
+                    idle Transform("images/hud/icon_skip.png", zoom=0.3)
+                    hover Transform("images/hud/icon_skip_hover.png", zoom=0.3)
+                    selected_idle Transform("images/hud/icon_skip_hover.png", zoom=0.3)   # активное = hover
+                    action Skip()
+                    alternate Skip(fast=True, confirm=True)
+                    xsize 50
+                    ysize 80
 
-                hbox:
-                    spacing 9
-                    yalign 0.5
-
-                    # add "images/hud/skip.png":
-                    #     xsize 24
-                    #     ysize 24
-
-                    text _("ПРОПУСК"):
-                        style "quick_button_text"
-
-
+                # Кнопка авто
+                imagebutton:
+                    idle Transform("images/hud/icon_auto.png", zoom=0.3)
+                    hover Transform("images/hud/icon_auto_hover.png", zoom=0.29)
+                    selected_idle Transform("images/hud/icon_auto_hover.png", zoom=0.29)
+                    action Preference("auto-forward", "toggle")
+                    xsize 50
+                    ysize 80
             # -----------------------------------------------------
             # МЕНЮ — СПРАВА
             # -----------------------------------------------------
@@ -851,10 +854,6 @@ screen quick_menu():
                 hbox:
                     spacing 9
                     yalign 0.5
-
-                    # add "images/hud/game_menu.png":
-                    #     xsize 24
-                    #     ysize 24
 
                     text _("МЕНЮ"):
                         style "quick_button_text"
@@ -899,7 +898,7 @@ style quick_button_text:
 
     color "#B7B9BB"
     idle_color "#B7B9BB"
-    hover_color "#FFFFFF"
+    hover_color "#00B8ED"
 
     insensitive_color "#697278"
 
