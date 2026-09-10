@@ -185,10 +185,6 @@ image bg micko4_2:
 
 image bg micko4_3:
     "micko4_3.png"
-    fit "cover"            
-
-image bg city_credits:
-    "city_credits.png"
     fit "cover"
 
 image bg andrea_pick:

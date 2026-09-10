@@ -28,7 +28,7 @@ label day1_intro:
     "Он каждый день балансировал между заказами, выживанием и человечностью"
 
     scene bg table
-    $ renpy.music.set_volume(0.3, channel='music')
+    $ renpy.music.set_volume(0.4, channel='music')
     play sound "inventory.mp3" noloop
 
     k "Очередной день. Что у нас тут?"

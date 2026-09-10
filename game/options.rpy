@@ -198,6 +198,12 @@ init python:
     build.documentation('*.html')
     build.documentation('*.txt')
 
+# init python:
+#     # Отключаем откат
+#     config.rollback_enabled = False
+#     config.keymap['rollback'] = []
+
+
 ## Для совершения покупок в приложении требуется лицензионный ключ Google Play.
 ## Его можно найти в консоли разработчика Google Play в разделе "Монетизация" >
 ## "Настройка монетизации" > "Лицензирование".

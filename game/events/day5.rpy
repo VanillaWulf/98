@@ -2,6 +2,7 @@ label day5_start:
    # --- Утро ---
     $ current_day = 5
     "Пятый день."
+    play sound "new_day.mp3" noloop
 
     scene bg call_nonni_sad
     play sound "call_answer.mp3" noloop

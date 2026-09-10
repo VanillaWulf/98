@@ -365,73 +365,6 @@ style say_label:
 
     xpos 55
     ypos 28
-    
-# screen say(who, what):
-
-#     window:
-#         id "window"
-
-#         if who is not None:
-
-#             window:
-#                 id "namebox"
-#                 style "namebox"
-#                 text who id "who"
-
-#         text what id "what"
-
-
-#     ## Если есть боковое изображение ("голова"), показывает её поверх текста.
-#     ## По стандарту не показывается на варианте для мобильных устройств — мало
-#     ## места.
-#     if not renpy.variant("small"):
-#         add SideImage() xalign 0.0 yalign 1.0
-
-
-# ## Делает namebox доступным для стилизации через объект Character.
-# init python:
-#     config.character_id_prefixes.append('namebox')
-
-# style window is default
-# style say_label is default
-# style say_dialogue is default
-# style say_thought is say_dialogue
-
-# style namebox is default
-# style namebox_label is say_label
-
-
-# style window:
-#     xalign 0.5
-#     xfill True
-#     yalign gui.textbox_yalign
-#     ysize gui.textbox_height
-
-#     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
-
-# style namebox:
-#     xpos gui.name_xpos
-#     xanchor gui.name_xalign
-#     xsize gui.namebox_width
-#     ypos gui.name_ypos
-#     ysize gui.namebox_height
-
-#     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-#     padding gui.namebox_borders.padding
-
-# style say_label:
-#     properties gui.text_properties("name", accent=True)
-#     xalign gui.name_xalign
-#     yalign 0.5
-
-# style say_dialogue:
-#     properties gui.text_properties("dialogue")
-
-#     xpos gui.dialogue_xpos
-#     xsize gui.dialogue_width
-#     ypos gui.dialogue_ypos
-
-#     adjust_spacing False
 
 ## Экран ввода #################################################################
 ##
@@ -475,11 +408,6 @@ style input:
 ## каждый с заголовком и полями действия.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
-
-# =========================================================
-# CITY N98 — UNIVERSAL CHOICE MENU
-# =========================================================
-
 
 # =========================================================
 # CITY N98 — UNIVERSAL CHOICE MENU
@@ -921,18 +849,6 @@ screen main_menu():
 
     # Фон всего меню
     add "menu_bg" xysize (config.screen_width, config.screen_height)
-
-    # # Затемнение левой панели
-    # add Solid("#050a0d") xsize 650 ysize 1080
-
-    # # Тонкая голубая граница панели
-    # add Solid("#00a9dc") xpos 648 ypos 0 xsize 3 ysize 1080
-
-    # # Внутренняя рамка панели
-    # add Solid("#18303a") xpos 25 ypos 20 xsize 600 ysize 2
-    # add Solid("#18303a") xpos 25 ypos 1058 xsize 600 ysize 2
-    # add Solid("#18303a") xpos 25 ypos 20 xsize 2 ysize 1040
-    # add Solid("#18303a") xpos 623 ypos 20 xsize 2 ysize 1040
 
     # ==========================================
     # ЛОГОТИП
@@ -1450,239 +1366,6 @@ style about_label_text:
     size gui.label_text_size
 
 
-## Экраны загрузки и сохранения ################################################
-##
-## Эти экраны ответственны за возможность сохранять и загружать игру. Так
-## как они почти одинаковые, оба реализованы по правилам третьего экрана —
-## file_slots.
-##
-## https://www.renpy.org/doc/html/screen_special.html#save 
-
-# screen save():
-
-#     tag menu
-
-#     use file_slots(_("Сохранить"))
-
-
-# screen load():
-
-#     tag menu
-
-#     use file_slots(_("Загрузить"))
-
-
-# screen file_slots(title):
-
-#     default page_name_value = FilePageNameInputValue(pattern=_("{} страница"), auto=_("Автосохранения"), quick=_("Быстрые сохранения"))
-
-#     use game_menu(title):
-
-#         fixed:
-
-#             ## Это гарантирует, что ввод будет принимать enter перед остальными
-#             ## кнопками.
-#             order_reverse True
-
-#             ## Номер страницы, который может быть изменён посредством клика на
-#             ## кнопку.
-#             button:
-#                 style "page_label"
-
-#                 key_events True
-#                 xalign 0.5
-#                 action page_name_value.Toggle()
-
-#                 input:
-#                     style "page_label_text"
-#                     value page_name_value
-
-#             ## Таблица слотов.
-#             grid gui.file_slot_cols gui.file_slot_rows:
-#                 style_prefix "slot"
-
-#                 xalign 0.5
-#                 yalign 0.5
-
-#                 spacing gui.slot_spacing
-
-#                 for i in range(gui.file_slot_cols * gui.file_slot_rows):
-
-#                     $ slot = i + 1
-
-#                     button:
-#                         action FileAction(slot)
-
-#                         has vbox
-
-#                         add FileScreenshot(slot) xalign 0.5
-
-#                         text FileTime(slot, format=_("{#file_time}%A, %d %B %Y, %H:%M"), empty=_("Пустой слот")):
-#                             style "slot_time_text"
-
-#                         text FileSaveName(slot):
-#                             style "slot_name_text"
-
-#                         key "save_delete" action FileDelete(slot)
-
-#             ## Кнопки для доступа к другим страницам.
-#             vbox:
-#                 style_prefix "page"
-
-#                 xalign 0.5
-#                 yalign 1.0
-
-#                 hbox:
-#                     xalign 0.5
-
-#                     spacing gui.page_spacing
-
-#                     textbutton _("<") action FilePagePrevious()
-#                     key "save_page_prev" action FilePagePrevious()
-
-#                     if config.has_autosave:
-#                         textbutton _("{#auto_page}А") action FilePage("auto")
-
-#                     if config.has_quicksave:
-#                         textbutton _("{#quick_page}Б") action FilePage("quick")
-
-#                     ## range(1, 10) задаёт диапазон значений от 1 до 9.
-#                     for page in range(1, 10):
-#                         textbutton "[page]" action FilePage(page)
-
-#                     textbutton _(">") action FilePageNext()
-#                     key "save_page_next" action FilePageNext()
-
-#                 if config.has_sync:
-#                     if CurrentScreenName() == "save":
-#                         textbutton _("Загрузить Sync"):
-#                             action UploadSync()
-#                             xalign 0.5
-#                     else:
-#                         textbutton _("Скачать Sync"):
-#                             action DownloadSync()
-#                             xalign 0.5
-
-
-# style page_label is gui_label
-# style page_label_text is gui_label_text
-# style page_button is gui_button
-# style page_button_text is gui_button_text
-
-# style slot_button is gui_button
-# style slot_button_text is gui_button_text
-# style slot_time_text is slot_button_text
-# style slot_name_text is slot_button_text
-
-# style page_label:
-#     xpadding 75
-#     ypadding 5
-#     xalign 0.5
-
-# style page_label_text:
-#     textalign 0.5
-#     layout "subtitle"
-#     hover_color gui.hover_color
-
-# style page_button:
-#     properties gui.button_properties("page_button")
-
-# style page_button_text:
-#     properties gui.text_properties("page_button")
-
-# style slot_button:
-#     properties gui.button_properties("slot_button")
-
-# style slot_button_text:
-#     properties gui.text_properties("slot_button")
-
-
-## Экран настроек ##############################################################
-##
-## Экран настроек позволяет игроку настраивать игру под себя.
-##
-## https://www.renpy.org/doc/html/screen_special.html#preferences
-
-# screen preferences():
-
-#     tag menu
-
-#     use game_menu(_("Настройки"), scroll="viewport"):
-
-#         vbox:
-
-#             hbox:
-#                 box_wrap True
-
-#                 if renpy.variant("pc") or renpy.variant("web"):
-
-#                     vbox:
-#                         style_prefix "radio"
-#                         label _("Режим экрана")
-#                         textbutton _("Оконный") action Preference("display", "window")
-#                         textbutton _("Полный") action Preference("display", "fullscreen")
-
-#                 vbox:
-#                     style_prefix "check"
-#                     label _("Пропуск")
-#                     textbutton _("Всего текста") action Preference("skip", "toggle")
-#                     textbutton _("После выборов") action Preference("after choices", "toggle")
-#                     textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
-
-#                 ## Дополнительные vbox'ы типа "radio_pref" или "check_pref"
-#                 ## могут быть добавлены сюда для добавления новых настроек.
-
-#             null height (4 * gui.pref_spacing)
-
-#             hbox:
-#                 style_prefix "slider"
-#                 box_wrap True
-
-#                 vbox:
-
-#                     label _("Скорость текста")
-
-#                     bar value Preference("text speed")
-
-#                     label _("Скорость авточтения")
-
-#                     bar value Preference("auto-forward time")
-
-#                 vbox:
-
-#                     if config.has_music:
-#                         label _("Громкость музыки")
-
-#                         hbox:
-#                             bar value Preference("music volume")
-
-#                     if config.has_sound:
-
-#                         label _("Громкость звуков")
-
-#                         hbox:
-#                             bar value Preference("sound volume")
-
-#                             if config.sample_sound:
-#                                 textbutton _("Тест") action Play("sound", config.sample_sound)
-
-
-#                     if config.has_voice:
-#                         label _("Громкость голоса")
-
-#                         hbox:
-#                             bar value Preference("voice volume")
-
-#                             if config.sample_voice:
-#                                 textbutton _("Тест") action Play("voice", config.sample_voice)
-
-#                     if config.has_music or config.has_sound or config.has_voice:
-#                         null height gui.pref_spacing
-
-#                         textbutton _("Без звука"):
-#                             action Preference("all mute", "toggle")
-#                             style "mute_all_button"
-
 # =========================================================
 # НАСТРОЙКИ
 # =========================================================
@@ -1980,6 +1663,11 @@ screen history():
         ypos 225
         style "menu_subtitle"
 
+    add Solid("#030b0fDD"):
+        xpos 550
+        ypos 300
+        xsize 1080
+        ysize 545
 
     # =====================================================
     # ИСТОРИЯ — ПРАВАЯ ЧАСТЬ
@@ -2096,213 +1784,6 @@ style history_empty:
     font "fonts/DejaVuSans.ttf"
     size 22
     color "#697278"
-
-
-
-## Это определяет, какие теги могут отображаться на экране истории.
-
-# define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
-
-
-# style history_window is empty
-
-# style history_name is gui_label
-# style history_name_text is gui_label_text
-# style history_text is gui_text
-
-# style history_label is gui_label
-# style history_label_text is gui_label_text
-
-# style history_window:
-#     xfill True
-#     ysize gui.history_height
-
-# style history_name:
-#     xpos gui.history_name_xpos
-#     xanchor gui.history_name_xalign
-#     ypos gui.history_name_ypos
-#     xsize gui.history_name_width
-
-# style history_name_text:
-#     min_width gui.history_name_width
-#     textalign gui.history_name_xalign
-
-# style history_text:
-#     xpos gui.history_text_xpos
-#     ypos gui.history_text_ypos
-#     xanchor gui.history_text_xalign
-#     xsize gui.history_text_width
-#     min_width gui.history_text_width
-#     textalign gui.history_text_xalign
-#     layout ("subtitle" if gui.history_text_xalign else "tex")
-
-# style history_label:
-#     xfill True
-
-# style history_label_text:
-#     xalign 0.5
-
-
-## Экран помощи ################################################################
-##
-## Экран, дающий информацию о клавишах управления. Он использует другие экраны
-## (keyboard_help, mouse_help, и gamepad_help), чтобы показывать актуальную
-## помощь.
-
-# screen help():
-
-#     tag menu
-
-#     default device = "keyboard"
-
-#     use game_menu(_("Помощь"), scroll="viewport"):
-
-#         style_prefix "help"
-
-#         vbox:
-#             spacing 23
-
-#             hbox:
-
-#                 textbutton _("Клавиатура") action SetScreenVariable("device", "keyboard")
-#                 textbutton _("Мышь") action SetScreenVariable("device", "mouse")
-
-#                 if GamepadExists():
-#                     textbutton _("Геймпад") action SetScreenVariable("device", "gamepad")
-
-#             if device == "keyboard":
-#                 use keyboard_help
-#             elif device == "mouse":
-#                 use mouse_help
-#             elif device == "gamepad":
-#                 use gamepad_help
-
-
-# screen keyboard_help():
-
-#     hbox:
-#         label _("Enter")
-#         text _("Прохождение диалогов, активация интерфейса.")
-
-#     hbox:
-#         label _("Пробел")
-#         text _("Прохождение диалогов без возможности делать выбор.")
-
-#     hbox:
-#         label _("Стрелки")
-#         text _("Навигация по интерфейсу.")
-
-#     hbox:
-#         label _("Esc")
-#         text _("Вход в игровое меню.")
-
-#     hbox:
-#         label _("Ctrl")
-#         text _("Пропускает диалоги, пока зажат.")
-
-#     hbox:
-#         label _("Tab")
-#         text _("Включает режим пропуска.")
-
-#     hbox:
-#         label _("Page Up")
-#         text _("Откат назад по сюжету игры.")
-
-#     hbox:
-#         label _("Page Down")
-#         text _("Откатывает предыдущее действие вперёд.")
-
-#     hbox:
-#         label "H"
-#         text _("Скрывает интерфейс пользователя.")
-
-#     hbox:
-#         label "S"
-#         text _("Делает снимок экрана.")
-
-#     hbox:
-#         label "V"
-#         text _("Включает поддерживаемый {a=https://www.renpy.org/l/voicing}синтезатор речи{/a}.")
-
-#     hbox:
-#         label "Shift+A"
-#         text _("Открывает меню специальных возможностей.")
-
-
-# screen mouse_help():
-
-#     hbox:
-#         label _("Левый клик")
-#         text _("Прохождение диалогов, активация интерфейса.")
-
-#     hbox:
-#         label _("Клик колёсиком")
-#         text _("Скрывает интерфейс пользователя.")
-
-#     hbox:
-#         label _("Правый клик")
-#         text _("Вход в игровое меню.")
-
-#     hbox:
-#         label _("Колёсико вверх")
-#         text _("Откат назад по сюжету игры.")
-
-#     hbox:
-#         label _("Колёсико вниз")
-#         text _("Откатывает предыдущее действие вперёд.")
-
-
-# screen gamepad_help():
-
-#     hbox:
-#         label _("Правый триггер\nA/Нижняя кнопка")
-#         text _("Прохождение диалогов, активация интерфейса.")
-
-#     hbox:
-#         label _("Левый Триггер\nЛевый Бампер")
-#         text _("Откат назад по сюжету игры.")
-
-#     hbox:
-#         label _("Правый бампер")
-#         text _("Откатывает предыдущее действие вперёд.")
-
-#     hbox:
-#         label _("Крестовина, Стики")
-#         text _("Навигация по интерфейсу.")
-
-#     hbox:
-#         label _("Старт, Гид, B/Правая кнопка")
-#         text _("Вход в игровое меню.")
-
-#     hbox:
-#         label _("Y/Верхняя кнопка")
-#         text _("Скрывает интерфейс пользователя.")
-
-#     textbutton _("Калибровка") action GamepadCalibrate()
-
-
-# style help_button is gui_button
-# style help_button_text is gui_button_text
-# style help_label is gui_label
-# style help_label_text is gui_label_text
-# style help_text is gui_text
-
-# style help_button:
-#     properties gui.button_properties("help_button")
-#     xmargin 12
-
-# style help_button_text:
-#     properties gui.text_properties("help_button")
-
-# style help_label:
-#     xsize 375
-#     right_padding 30
-
-# style help_label_text:
-#     size gui.text_size
-#     xalign 1.0
-#     textalign 1.0
-
 
 
 ################################################################################
@@ -2867,7 +2348,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23
@@ -2889,7 +2370,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23
@@ -2911,7 +2392,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23
@@ -2933,7 +2414,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23
@@ -2960,7 +2441,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23
@@ -2982,7 +2463,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23
@@ -3004,7 +2485,7 @@ screen city98_credits():
                     color "#00B8ED"
                     size 24
 
-                text "Anarsve":
+                text "Annarsve":
                     xalign 0.5
                     color "#B7B9BB"
                     size 23

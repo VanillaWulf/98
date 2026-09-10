@@ -1,5 +1,6 @@
 label day2_start:
     play music "rain.mp3" loop
+    $ renpy.music.set_volume(0.4, channel='music')
     play sound "new_day.mp3" noloop
     $ current_day = 2
     scene bg kvist
