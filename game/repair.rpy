@@ -36,7 +36,7 @@ label repair_linchi:
         $ clients["linh"]["order_completed"] = True
         "Минус схема, минус провод, зато заказ для бабушки Линь готов"
     else:
-        "Не хватает деталей (нужен провод и микросхема).."
+        "Не хватает деталей (нужен провод и микросхема)."
     jump evening_menu
 
 label repair_becker:

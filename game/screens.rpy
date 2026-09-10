@@ -729,8 +729,6 @@ screen quick_menu():
 
     zorder 100
 
-    key "game_menu" action ShowMenu("game_menu", title="Меню")
-
     if quick_menu:
 
         fixed:
@@ -1105,7 +1103,7 @@ init python:
 ## ИГРОВОЕ МЕНЮ — ESC
 ## =========================================================
 
-screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+screen game_menu(title="Меню", scroll=None, yinitial=0.0, spacing=0):
 
     tag menu
 

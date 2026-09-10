@@ -30,7 +30,7 @@ label day2_start:
     play sound "knock.mp3" noloop
     "Стук в дверь."
     scene bg linchi
-    l "Доброе день, Квист. Как спалось?"
+    l "Добрый день, Квист. Как спалось?"
     if clients["mikko"]["hangouts_day_1"]:
         "Квист пытается улыбнуться"  
         l "Говорят, кто-то ночью бурогозил... без меня..."
@@ -38,7 +38,7 @@ label day2_start:
         k "Добрый, бабуля, Линь, как обычно"  
     if clients["linh"]["order_active"] and clients["linh"]["order_completed"]:
 
-        l "как там мой заказ?"
+        l "Как там мой заказ?"
         menu:
             extend ""
             "Пока не готов":

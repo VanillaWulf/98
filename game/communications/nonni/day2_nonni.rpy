@@ -117,7 +117,7 @@ label day2_call_nonni:
             menu:
                 extend ""
                 "Пока не готов":
-                    n "Ты совсем сдурел звонить и говорит, что он не сделан?"
+                    n "Ты совсем сдурел звонить и говорить, что он не сделан?"
                 "Готов, отдам бесплатно":
                     $ clients["nonni"]["repair_price"] = 0
                     $ clients["nonni"]["repair_day"] = current_day
@@ -161,7 +161,7 @@ label day2_call_nonni:
         elif not clients["nonni"]["order_active"]:
             scene bg call_nonni
             play sound "call_answer.mp3" noloop
-            n "Cпасибо за ремонт, сегодня у меня нет времени дальше говорить, пока"
+            n "Спасибо за ремонт, сегодня у меня нет времени дальше говорить, пока"
             $ clients["nonni"]["banned"] = True
             jump phone_menu
 
@@ -208,7 +208,7 @@ label day2_call_nonni:
                     $ clients["andrea"]["nonni_delivered"] = True
                     $ clients["andrea"]["cure_price"] -= 9
                     $ money += 15
-                    n "Этот звонок мне нравится больше, чем предыдущий! Не отвлекая меня"
+                    n "Этот звонок мне нравится больше, чем предыдущий! Не отвлекая меня."
                     play sound "money.mp3" noloop
                     "Вам зачислили 15 кредитов"
                     $ clients["nonni"]["banned"] = True

@@ -154,6 +154,8 @@ define config.save_directory = "Game98-1781165327"
 
 define config.window_icon = "gui/window_icon.png"
 
+define build.windows_icon = "gui/window_icon.ico"
+
 
 ## Настройка Дистрибутива ######################################################
 ##
@@ -202,6 +204,14 @@ init python:
 #     # Отключаем откат
 #     config.rollback_enabled = False
 #     config.keymap['rollback'] = []
+
+init python:
+    # Отключаем откат
+    config.rollback_enabled = False
+    config.keymap['rollback'] = []
+    # Меню
+    config.keymap["game_menu"] = ["K_ESCAPE"]
+    config.game_menu_action = ShowMenu("game_menu", title="Меню")
 
 
 ## Для совершения покупок в приложении требуется лицензионный ключ Google Play.

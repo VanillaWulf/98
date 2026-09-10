@@ -6,7 +6,7 @@ label day1_call_becker:
         play sound "call_no_answer.mp3" noloop
         b "..."
         "Беккер не отвечает."
-        k "Надеюсь, он не разолзлился"  
+        k "Надеюсь, он не разозлился"  
         jump phone_menu
 
     $ clients["bekker"]["called"] += 1
@@ -15,7 +15,7 @@ label day1_call_becker:
 
     if clients["bekker"]["called"] == 1:
         $ price = clients["bekker"]["base_price"]
-        b "Слушаю. Если нужны детали всегда рад помочь, но завтра смогу подвезти только 1 микросхему = [price]$. Берешь?"
+        b "Слушаю. Если нужны детали, всегда рад помочь, но завтра смогу подвезти только 1 микросхему = [price]$. Берешь?"
         menu:
             extend ""
             "Давай, беру (квист, лучше закажи)":
